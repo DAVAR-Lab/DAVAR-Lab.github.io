@@ -171,16 +171,16 @@ kramdown:
 
 # Collections
 collections:
-  teaching:
+  news:
     output: true
     permalink: /:collection/:path/
   publications:
     output: true
     permalink: /:collection/:path/
-  portfolio:
+  records:
     output: true
     permalink: /:collection/:path/
-  talks:
+  opensource:
     output: true
     permalink: /:collection/:path/
 
@@ -205,10 +205,10 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _teaching
+  # _news
   - scope:
       path: ""
-      type: teaching
+      type: news
     values:
       layout: single
       author_profile: true
@@ -223,19 +223,19 @@ defaults:
       author_profile: true
       share: true
       comments: true
-  # _portfolio
+  # _records
   - scope:
       path: ""
-      type: portfolio
+      type: records
     values:
       layout: single
       author_profile: true
       share: true
       comment: true
-  # _talks
+  # _opensource
   - scope:
       path: ""
-      type: talks
+      type: opensource
     values:
       layout: talk
       author_profile: true
