@@ -1,16 +1,16 @@
 # main links links
 main:
   - title: "News"
-    url: /news/    
+    url: /talks/    
 
   - title: "Publications"
     url: /publications/
 
   - title: "Records"
-    url: /records/
+    url: /portfolio/
 
   - title: "OpenSource"
-    url: /opensource/    
+    url: /teaching/    
     
   - title: "AboutUS"
-    url: /aboutus/
+    url: /markdown/
