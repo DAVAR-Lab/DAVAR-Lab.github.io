@@ -9,3 +9,5 @@ redirect_from:
 ---
 
 DAVAR-Lab is now established.
+
+Maintained by Shixin Qin.
