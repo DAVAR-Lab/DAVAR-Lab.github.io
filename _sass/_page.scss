@@ -20,7 +20,7 @@
   @include breakpoint($large) {
     @include span(10 of 12 last);
     @include prefix(0.5 of 12);
-    @include suffix(2 of 12);
+    // @include suffix(2 of 12);
   }
 
   .page__inner-wrap {
@@ -73,16 +73,38 @@
   }
 
   a {
-    text-decoration: underline;
+    text-decoration: none;
+
 
     &:hover {
-      text-decoration: underline;
+      // text-decoration: underline;
+      color: blue;
 
       img {
         box-shadow: 0 0 10px rgba(#000, 0.25);
       }
+      img.iconimg {
+        box-shadow: none;
+      }
     }
   }
+
+  .iconurl {
+    display: inline;
+    padding:1em 2em; 
+    cursor: pointer;
+
+    img {
+      margin-left: 1em;
+      margin-right: 1em;
+      width: 27px;
+    }
+  }
+
+  .highlighter-rouge:last-of-type {
+    display: none;
+  }
+
 
   dt {
     margin-top: 1em;
@@ -398,4 +420,14 @@
   margin-bottom: 10px;
   font-size: $type-size-6;
   text-transform: uppercase;
+}
+
+
+
+.citation {
+  font-style: italic;
+}
+
+.citation-hid {
+  display: none;
 }

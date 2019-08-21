@@ -10,7 +10,7 @@ location: "City, Country"
 
 This is a description of a teaching experience. You can use markdown like any other post.
 
-Heading 12134234
+Heading 12134
 ======
 
 Heading 2

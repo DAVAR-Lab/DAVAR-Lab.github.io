@@ -38,6 +38,11 @@
     font-size: $type-size-5;
   }
 
+  .sidebarlink {
+    padding-left: 1em;
+    text-decoration: none;
+  }
+
   p, li {
     font-family: $sans-serif;
     font-size: $type-size-6;

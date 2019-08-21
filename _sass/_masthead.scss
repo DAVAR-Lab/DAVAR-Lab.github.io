@@ -31,6 +31,16 @@
   }
 }
 
+
+.cont1 {
+  float: left;
+  // display: inline;
+}
+.cont2 {
+  float: right;
+  // display: inline;
+}
+
 .masthead__menu {
 
   ul {
@@ -38,6 +48,7 @@
     padding: 0;
     clear: both;
     list-style-type: none;
+    float: right!important;
   }
 }
 
@@ -45,9 +56,20 @@
   display: block;
   list-style-type: none;
   white-space: nowrap;
+  padding-top: 7px;
+
 
   &--lg {
     padding-right: 2em;
     font-weight: 700;
+    font-size: 25px;
+    padding-top: 0;
+
   }
 }
+
+
+.greedy-nav .visible-links .masthead__menu-item a{
+  font-weight: normal;
+}
+

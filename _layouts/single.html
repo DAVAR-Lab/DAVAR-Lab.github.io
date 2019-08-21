@@ -44,9 +44,9 @@ layout: default
         
              
         {% if page.citation and page.paperurl %}
-          <p>Recommended citation: {{ page.citation }} <a href="{{ page.paperurl }}"><u>{{ page.paperurl }}</u></a></p>
+          <p class="citation-hid">Recommended citation: {{ page.citation }} <a href="{{ page.paperurl }}"><u>{{ page.paperurl }}</u></a></p>
         {% elsif page.citation %}
-          <p>Recommended citation: {{ page.citation }} </p>
+          <p class="citation-hid">Recommended citation: {{ page.citation }} </p>
         {% endif %}
     
         </header>
@@ -54,7 +54,23 @@ layout: default
 
       <section class="page__content" itemprop="text">
         {{ content }}
+        {% if page.slides %}
+          <a class="iconurl" href="{{page.slides}}"><img class="iconimg" src="../images/slides.svg">Slides</a>
+        {% endif %}
+        {% if page.paperurl %}
+          <a class="iconurl" href="{{page.paperurl}}"><img class="iconimg" src="../images/pdf.svg">Paper</a>
+        {% endif %}
+        {% if page.code %}
+          <a class="iconurl" href="{{page.code}}"><img class="iconimg" src="../images/code.jpg">Code</a>
+        {% endif %}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
+        
+        
+        {% if page.bibtex %}
+          <a class="iconurl" id="bib" onclick="showBib();" ><img class="iconimg" src="../images/cite.svg" >BibTex Citation</a>
+        <!-- <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{{bibtex}}
+        </code></pre></div></div> -->
+        {% endif %}
       </section>
 
       <footer class="page__meta">

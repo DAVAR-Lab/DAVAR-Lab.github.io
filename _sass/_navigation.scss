@@ -123,17 +123,17 @@
   /* next/previous buttons */
   &--pager {
     display: block;
-    padding: 1em 2em;
+    padding: 1em 1em;
     float: left;
-    width: 50%;
+    width: 12%;
     font-family: $sans-serif;
     font-size: $type-size-5;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
     color: mix(#fff, $gray, 50%);
-    border: 1px solid $light-gray;
-    border-radius: $border-radius;
+    // border: 1px solid $light-gray;
+    // border-radius: $border-radius;
 
     &:hover {
       color: $link-color-hover;
@@ -148,24 +148,26 @@
       margin-left: -1px;
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
+      float: right;
     }
 
     &.disabled {
       color: mix(#fff, $gray, 75%);
       pointer-events: none;
       cursor: not-allowed;
+      display: none;
     }
   }
 }
 
-.page__content + .pagination,
-.page__meta + .pagination,
-.page__share + .pagination,
-.page__comments + .pagination {
-  margin-top: 2em;
-  padding-top: 2em;
-  border-top: 1px solid $border-color;
-}
+// .page__content + .pagination,
+// .page__meta + .pagination,
+// .page__share + .pagination,
+// .page__comments + .pagination {
+//   margin-top: 2em;
+//   padding-top: 2em;
+//   border-top: 1px solid $border-color;
+// }
 
 
 /*

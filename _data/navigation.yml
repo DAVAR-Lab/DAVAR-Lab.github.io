@@ -1,16 +1,59 @@
 # main links links
 main:
   - title: "News"
-    url: /talks/    
+    url: /news/
+
+  # - title: "Talks"
+  #   url: /talks/    
 
   - title: "Publications"
     url: /publications/
 
   - title: "Records"
-    url: /portfolio/
+    url: /records/
 
-  - title: "OpenSource"
+  - title: "Open Source"
     url: /teaching/    
     
-  - title: "AboutUS"
-    url: /markdown/
+  - title: "About Us"
+    url: /markdown/  
+
+
+
+publications:
+  - title: News
+    children:
+      - title: "Latest publications"
+        url: /publications/
+      - title: "Recent conference presences"
+        url: /record/
+      - title: "Talks and speeches"
+        url: /talks/
+  - title: Files
+    children:
+      - title: "Open source code"
+        url: /opensource/
+      - title: "Public dataset"
+        url: /dataset/
+  - title: Content
+    children:
+      - title: "Talkmap"
+        url: /talkmap/
+      - title: "Posts"
+        url: /posts/
+      - title: "Working with Pages"
+        url: /pages/
+      - title: "Working with Collections"
+        url: /collections/
+      - title: "Sitemap"
+        url: /sitemap/
+      - title: "Utility Classes"
+        url: /utility-classes/
+
+
+more:
+  - title: About us
+    children:
+      - title: "About"
+      - title: "Join us"
+      - title: "Contact DAVAR-Lab"
