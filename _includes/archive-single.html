@@ -53,7 +53,7 @@
     {% endif %}
     
     {% if post.citation and post.paperurl %}
-      <p class="citation">Recommended citation: {{ post.citation }} <a href="{{ post.paperurl }}"><u>{{ post.paperurl }}</u></a></p>
+      <p class="citation">Recommended citation: {{ post.citation }} <a href="{{ post.paperurl }}"><img width="22px" src="/images/download.svg"></a></p>
     {% elsif post.citation %}
       <p class="citation">Recommended citation: {{ post.citation }} </p>
     {% elsif post.paperurl %}
