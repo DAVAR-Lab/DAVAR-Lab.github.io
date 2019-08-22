@@ -184,6 +184,9 @@ collections:
   records:
     output: true
     permalink: /:collection/:path/
+  codes:
+    output: true
+    permalink: /:collection/:path/
 # Defaults
 defaults:
   # _posts
@@ -225,8 +228,7 @@ defaults:
       author_profile: true
       share: true
       comments: true
-      sidebar: 
-        nav: "publications"
+      sidebar: true
   # _records
   - scope:
       path: ""
@@ -243,6 +245,15 @@ defaults:
       type: talks
     values:
       layout: talk
+      author_profile: true
+      share: true
+      sidebar: true
+  # _codes
+  - scope:
+      path: ""
+      type: codes
+    values:
+      layout: single
       author_profile: true
       share: true
       sidebar: true

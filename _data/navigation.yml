@@ -12,15 +12,18 @@ main:
   - title: "Records"
     url: /records/
 
-  - title: "Open Source"
+  - title: "Teaching"
     url: /teaching/    
+
+  - title: "Open Source"
+    url: /codes/   
     
   - title: "About Us"
     url: /markdown/  
 
 
 
-publications:
+navigator:
   - title: News
     children:
       - title: "Latest publications"
@@ -32,7 +35,7 @@ publications:
   - title: Files
     children:
       - title: "Open source code"
-        url: /opensource/
+        url: /codes/
       - title: "Public dataset"
         url: /dataset/
   - title: Content
