@@ -8,13 +8,13 @@
 # Site Settings
 theme                    : minimal-mistakes-jekyll
 locale                   : "en-US"
-title                    : "DAVAR-Lab"
+title                    : "DAVAR"
 title_separator          : "-"
-name                     : &name "DAVAR-Lab"
+name                     : &name "DAVAR"
 description              : &description "personal description"
 url                      : https://127.0.0.1:4000 # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : #"DAVAR-Lab.github.io"
+repository               : #"DAVAR.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -81,7 +81,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "DAVAR-Lab"
+  name             : "DAVAR"
   avatar           : "profile.png"
   bio              : "TODO"
   location         : "Shanghai, China"
@@ -178,9 +178,6 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
-  teaching:
-    output: true
-    permalink: /:collection/:path/
   records:
     output: true
     permalink: /:collection/:path/
@@ -208,16 +205,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-      sidebar: true
-  # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
       sidebar: true
   # _publications
   - scope:

@@ -3,6 +3,7 @@
   <div class="sidebar sticky">
   <!-- {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %} -->
   {% if page.sidebar %}
+  <!--
   {% for link in site.data.navigation.navigator %}
   {% if link.url contains 'http' %}
     {% assign domain = '' %}
@@ -10,13 +11,12 @@
     {% assign domain = base_path %}
   {% endif %}
   {% if link.title %}<h3>{{ link.title }}</h3>{% endif %}
-  <!-- {% include nav_list nav=link %} -->
-  <!-- {% include nav_list nav=site.data.navigation.publications %} -->
   {% for child in link.children %}
   <a href="{{child.url| prepend: base_path}}" class="sidebarlink">{{ child.title | markdownify }}</a>
   {% endfor %}
-
+  
   {% endfor %}
+  -->
 
 <!-- 
     {% for s in page.sidebar %}

@@ -2,6 +2,4 @@
 
 Index
 
-DAVAR-Lab is now established.
-
-Maintained by Shixin Qin.
+Welcome to DAVAR-site!

@@ -10,10 +10,7 @@ main:
     url: /publications/
 
   - title: "Records"
-    url: /records/
-
-  - title: "Teaching"
-    url: /teaching/    
+    url: /records/   
 
   - title: "Open Source"
     url: /codes/   

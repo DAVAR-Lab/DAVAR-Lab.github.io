@@ -1,6 +1,6 @@
 ---
 permalink: /about/
-title: "About DAVAR-Lab"
+title: "About DAVAR"
 excerpt: "About me"
 author_profile: true
 # redirect_from: 
@@ -8,6 +8,4 @@ author_profile: true
 #   - /about.html
 ---
 
-DAVAR-Lab is now established.
-
-Maintained by Shixin Qin.
+DAVAR-site is now established.
