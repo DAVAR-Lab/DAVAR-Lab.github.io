@@ -8,19 +8,6 @@ permalink: /news/
 {% include base_path %}
 
 
-<!-- <h2>Publications</h2>
- {% for post in site.pages %}
-  {% include archive-single.html %}
-{% endfor %} 
-{% for post in site.publications limit:2 reversed %}
-  {% include archive-single.html %}
-{% endfor %}
-
-<h2>Attendance and Talks</h2>
-{% for post in site.talks limit:2 reversed %}
-  {% include archive-single.html %}
-{% endfor %} -->
-
 {% capture written_label %}'None'{% endcapture %}
 
 {% for collection in site.collections %}
@@ -31,7 +18,7 @@ permalink: /news/
   {% capture written_label %}{{ label }}{% endcapture %}
   {% endif %}
 {% endunless %}
-{% for post in collection.docs limit:2 reversed %}
+{% for post in collection.docs limit:5 reversed %}
   {% unless collection.output == false or collection.label == "posts" %}
   {% include archive-single.html %}
   {% endunless %}
