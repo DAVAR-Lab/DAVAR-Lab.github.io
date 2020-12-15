@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <title>DAVAR LAB</title>
+        <meta name="description" content="">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
+
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/small_logo.png">
+</head>
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
+    <div class="navigation"></div>
+
+    <div class="news top-container" style="font-size: 16px">
+        <div class="container-fluid">
+            <div class="post">
+                <header>
+                    <h1>Segregated Temporal Assembly Recurrent Networks for Weakly Supervised Multiple Action Detection</h1>
+                    <hr />
+                </header>
+		    
+		    
+		<img src="../img/publications/aaai2019_star.png" />
+
+
+
+                <h2>Abstract</h2>
+		    Video text spotting is still an important research topic due to its various real-applications. 
+This paper proposes a segregated temporal assembly recurrent (STAR) network for weakly-supervised multiple action detection. 
+The model learns from untrimmed videos with only supervision of video-level labels and makes prediction of intervals of multiple actions. 
+Speciﬁcally, we ﬁrst assemble video clips according to class labels by an attention mechanism that learns class-variable attention weights and thus helps the noise relieving from background or other actions. 
+Secondly, we build temporal relationship between actions by feeding the assembled features into an enhanced recurrent neural network. 
+Finally, we transform the output of recurrent neural network into the corresponding action distribution. 
+In order to generate more precise temporal proposals, we design a score term called segregated temporal gradient-weighted class activation mapping (ST-GradCAM) fused with attention weights. 
+Experiments on THUMOS’14 and ActivityNet1.3 datasets show that our approach outperforms the state-of-the-art weakly-supervised method, and performs at par with the fully-supervised counterparts.
+		    <a href="https://arxiv.org/pdf/1811.07460.pdf" target="_blank" 
+                               style="color: #990000">[Paper]</a>
+
+                <hr />
+
+                <h2>Highlights Contributions</h2>
+		    <p> ❃ We reformulate the multiple action detection from a multi-instance multi-label (MIML) perspective, i.e., extracting instance-patterns and generating action labels, which eliminates interference among unrelated action features and captures temporal dependency between multiple concurrent actions.</p>
+		    <p> ❃ We propose an end-to-end framework called Segregated Temporal Assembly Recurrent (STAR), which includes a well-designed attention module and an enhanced RNN, is developed to be trained in a weakly supervised manner from videos with only video-level labels.</p>
+		    <p> ❃ We design an ST-GradCAM operation fused with class-variable assembly weights for action temporal localization.</p>
+		    <p> ❃ Our extensive experiments demonstrate that our weakly supervised framework achieves impressive performance on the challenging THUMOS'14 and ActivityNet1.3 datasets for action detection, comparable with those of supervised learning methods.</p>
+		    
+		    
+		  
+				<hr />
+
+
+
+                <h2>Recommended Citations</h2>
+				If you find our work is helpful to your research, please feel free to cite us:
+				<br>
+				<!-- BibTex here (Make sure that this is the last code block) -->
+				<pre>
+@inproceedings{xu2019segregated,
+    title={Segregated temporal assembly recurrent networks for weakly supervised multiple action detection},
+    author={Xu, Yunlu and Zhang, Chengwei and Cheng, Zhanzhan and Xie, Jianwen and Niu, Yi and Pu, Shiliang and Wu, Fei},
+    booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+    volume={33},
+    pages={9070--9078},
+    year={2019}
+}
+				</pre>
+		<br><br>
+				
+
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/all.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".footer").load("/common/footer.html");
+            $(".navigation").load("/common/navigation.html");
+        });
+    </script>
+</body>
+</html>

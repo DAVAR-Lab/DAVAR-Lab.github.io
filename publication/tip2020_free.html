@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <title>DAVAR LAB</title>
+        <meta name="description" content="">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
+
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/small_logo.png">
+</head>
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
+    <div class="navigation"></div>
+
+    <div class="news top-container" style="font-size: 16px">
+        <div class="container-fluid">
+            <div class="post">
+                <header>
+                    <h1>FREE: A Fast and Robust End-to-End Video Text Spotter</h1>
+                    <hr />
+                </header>
+		    
+		    
+		<img src="../img/publications/tip2020_free.png" />
+
+
+
+                <h2>Abstract</h2>
+				Currently, video text spotting tasks usually fall into
+the four-staged pipeline: detecting text regions in individual images, recognizing localized text regions frame-wisely, tracking text
+streams and post-processing to generate final results. However,
+they may suffer from the huge computational cost as well as suboptimal results due to the interferences of low-quality text and
+the none-trainable pipeline strategy. In this paper, we propose
+a fast and robust end-to-end video text spotting framework
+named FREE by only recognizing the localized text stream onetime instead of frame-wise recognition. Specifically, FREE first
+employs a well-designed spatial-temporal detector that learns text
+locations among video frames. Then a novel text recommender
+is developed to select the highest-quality text from text streams
+for recognizing. Here, the recommender is implemented by
+assembling text tracking, quality scoring and recognition into
+a trainable module. It not only avoids the interferences from
+the low-quality text but also dramatically speeds up the video
+text spotting. FREE unites the detector and recommender into a
+whole framework, and helps achieve global optimization. Besides,
+we collect a large scale video text dataset for promoting the
+video text spotting community, containing 100 videos from 21
+real-life scenarios. Extensive experiments on public benchmarks
+show our method greatly speeds up the text spotting process, and
+also achieves the remarkable state-of-the-art.
+
+		    <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9266586" target="_blank" 
+                               style="color: #990000">[Paper]</a>
+
+                <hr />
+
+                <h2>Highlights Contributions</h2>
+                	<p> ❃ We achieve the video text spotting in an
+end-to-end trainable manner instead of the two-staged form
+in its conference version. To achieve this, we replace EAST with an end-to-end trainable text spotting framework Text
+Perceptron (abbr. TP), in which the original recognition
+module in TP is replaced with our text recommender submodule. </p>
+			<p> ❃ We further enhance the text recommender module by redesigning the template estimation mechanism in a
+learnable manner rather than roughly synthesizing templates
+by K-Means. This is because K-Means is inherently sensitive to outlier samples and not robust to complex scenarios.</p>
+			<p> ❃ Correspondingly, we explore the effects of FREE with
+more extensive experimental evaluations, which demonstrates
+the advantages of the extended version. Besides, we refine
+LSVTD by removing some consecutive background frames,
+and provide more detailed characteristics.</p>
+		    	
+
+				<hr />
+
+
+
+                <h2>Recommended Citations</h2>
+				If you find our work is helpful to your research, please feel free to cite us:
+				<br>
+				<!-- BibTex here (Make sure that this is the last code block) -->
+				<pre>
+@article{cheng2020free,
+    title={FREE: A Fast and Robust End-to-End Video Text Spotter},
+    author={Cheng, Zhanzhan and Lu, Jing and Zou, Baorui and Qiao, Liang and Xu, Yunlu and Pu, Shiliang and Niu, Yi and Wu, Fei and Zhou, Shuigeng},
+    journal={IEEE Transactions on Image Processing},
+    year={2020},
+    organization={IEEE}
+}		
+				</pre>
+		<br><br>
+				
+
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/all.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".footer").load("/common/footer.html");
+            $(".navigation").load("/common/navigation.html");
+        });
+    </script>
+</body>
+</html>

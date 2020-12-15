@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <title>DAVAR LAB</title>
+        <meta name="description" content="">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
+
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/small_logo.png">
+</head>
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
+    <div class="navigation"></div>
+
+    <div class="news top-container" style="font-size: 16px">
+        <div class="container-fluid">
+            <div class="post">
+                <header>
+                    <h1>Refined Gate: A Simple and Effective Gating Mechanism for Recurrent Units</h1>
+                    <hr />
+                </header>
+		    
+		    
+		<img src="../img/publications/arxiv2020_rg.png" />
+
+
+
+                <h2>Abstract</h2>
+Recurrent neural network (RNN) has been widely studied in sequence learning tasks, while the mainstream models (e.g., LSTM and GRU) rely on the gating mechanism (in control of how information flows between hidden states). However, the vanilla gates in RNN (e.g., the input gate in LSTM) suffer from the problem of gate undertraining, which can be caused by various factors, such as the saturating activation functions, the gate layouts (e.g., the gate number and gating functions), or even the suboptimal memory state etc.. Those may result in failures of learning gating switch roles and thus the weak performance. In this paper, we propose a new gating mechanism within general gated recurrent neural networks to handle this issue. Specifically, the proposed gates directly short connect the extracted input features to the outputs of vanilla gates, denoted as refined gates. The refining mechanism allows enhancing gradient back-propagation as well as extending the gating activation scope, which can guide RNN to reach possibly deeper minima. We verify the proposed gating mechanism on three popular types of gated RNNs including LSTM, GRU and MGU. Extensive experiments on 3 synthetic tasks, 3 language modeling tasks and 5 scene text recognition benchmarks demonstrate the effectiveness of our method.				<a href="https://arxiv.org/pdf/2002.11338.pdf" target="_blank" 
+                               style="color: #990000">[Paper]</a>
+
+                <hr />
+
+                <h2>Highlights Contributions</h2>
+                	<p> ❃ We provide a deeper
+understanding of gating mechanism in GRNNs and focus on the
+widely existing chanllenging problem: gate undertraining. </p>
+			<p> ❃ We
+propose a new gating mechanism enhancing the vanilla gates using
+simple yet effective refining operations, which is verified to be well
+adapted in existing GRNN units like LSTM, GRU and MGU.</p>
+			<p> ❃ We show intuitive evaluation on gate controlling ability through
+well-designed sequential tasks, i.e., adding and counting, and offer
+reasonable illustrations both qualitatively and quantitatively
+</p>
+
+<p> ❃ Experiments on various tasks, including 3 synthetic datasets and
+multiple real-world datasets (3 language modeling tasks and 5 scene
+text recognition benchmarks) demonstrate that the proposed gate
+refinement mechanism can effectively boost GRNN learning.
+</p>
+		    	
+
+				<hr />
+
+
+
+                <h2>Recommended Citations</h2>
+				If you find our work is helpful to your research, please feel free to cite us:
+				<br>
+				<!-- BibTex here (Make sure that this is the last code block) -->
+				<pre>
+@article{cheng2020rg, 
+    title={Object-QA: Towards High Reliable Object Quality Assessment}, 
+    author={Cheng, Zhanzhan and Xu, Yunlu and Cheng, Mingjian and Qiao, Yu and Pu, Shiliang and Niu, Yi and Wu, Fei}, 
+    journal={arXiv preprint arXiv:2002.11338},
+    year={2020}, 
+}				</pre>
+		<br><br>
+				
+
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/all.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".footer").load("/common/footer.html");
+            $(".navigation").load("/common/navigation.html");
+        });
+    </script>
+</body>
+</html>

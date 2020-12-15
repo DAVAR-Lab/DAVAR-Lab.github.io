@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <title>DAVAR LAB</title>
+        <meta name="description" content="">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
+
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/small_logo.png">
+</head>
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
+    <div class="navigation"></div>
+
+    <div class="news top-container" style="font-size: 16px">
+        <div class="container-fluid">
+            <div class="post">
+                <header>
+                    <h1>Recognizing Multiple Text Sequences from an Image by Pure End-To-End Learning</h1>
+                    <hr />
+                </header>
+		    
+		    
+		<img src="../img/publications/icpr2020_pee.png" />
+
+
+
+                <h2>Abstract</h2>
+Here we address a challenging problem: recognizing multiple text sequences from an image by pure end-to-end learning. It is twofold: 1) Multiple text sequences recognition. Each image may contain multiple text sequences of different content, location and orientation, and we try to recognize all the text sequences contained in the image. 2) Pure end-to-end (PEE) learning.We solve the problem in a pure end-to-end learning way where each training image is labeled by only text transcripts of all contained sequences, without any geometric annotations. Most existing works recognize multiple text sequences from an image in a non-end-to-end (NEE) or quasi-end-to-end (QEE) way, in which each image is trained with both text transcripts and text locations.Only recently, a PEE method was proposed to recognize text sequences from an image where the text sequence was split to several lines in the image. However, it cannot be directly applied to recognizing multiple text sequences from an image. So in this paper, we propose a pure end-to-end learning method to recognize multiple text sequences from an image. Our method directly learns multiple sequences of probability distribution conditioned on each input image, and outputs multiple text transcripts with a well-designed decoding this http URL evaluate the proposed method, we constructed several datasets mainly based on an existing public dataset andtwo real application scenarios. Experimental results show that the proposed method can effectively recognize multiple text sequences from images, and outperforms CTC-based and attention-based baseline methods.
+<a href="https://arxiv.org/pdf/1907.12791.pdf" target="_blank" 
+                               style="color: #990000">[Paper]</a>
+
+                <hr />
+
+                <h2>Highlights Contributions</h2>
+                	<p> ❃ Conceptually, we propose a new taxonomy of text
+recognition methods, i.e., NEE, QEE and PEE, and
+subsume the existing text sequence recognition works into two types: single sequence recognition (SSR) and
+multiple sequence recognition (MSR). Then, we put
+forward a new and more challenging problem: recognizing multiple sequences from images by pure endto-end learning, i.e., MSR by PEE.</p>
+			<p> ❃ We develop a novel PEE method MSRA to solve the
+MSR problem, in which the model is trained with only
+sequence-level text transcripts.</p>
+			<p> ❃ As we address a new problem, for evaluating the proposed method, we build up several datasets mainly
+based on the MNIST dataset and some real application scenarios including automatic bank card reading
+and ID card reading.
+
+</p>
+
+<p> ❃ We conduct extensive experiments on these datasets,
+which show that the proposed method can effectively
+recognize multiple sequences from images, and outperforms two CTC/attention based baseline methods.
+</p>
+		    	
+
+				<hr />
+
+
+
+                <h2>Recommended Citations</h2>
+				If you find our work is helpful to your research, please feel free to cite us:
+				<br>
+				<!-- BibTex here (Make sure that this is the last code block) -->
+				<pre>
+@article{Xu2019pee, 
+    title={Towards Pure End-to-End Learning for Recognizing Multiple Text Sequences from an Image}, 
+    author={Xu, Zhenlong and Zhou, shuigeng and Cheng, zhanzhan and Bai, fan and Niu, Yi and Pu, shiliang}, 
+    journal={arXiv preprint arXiv:1907.12791},
+    year={2020}, 
+}					
+</pre>
+		<br><br>
+				
+
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/all.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".footer").load("/common/footer.html");
+            $(".navigation").load("/common/navigation.html");
+        });
+    </script>
+</body>
+</html>

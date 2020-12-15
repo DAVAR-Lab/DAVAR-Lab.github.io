@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <title>DAVAR LAB</title>
+        <meta name="description" content="">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
+
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/small_logo.png">
+</head>
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
+    <div class="navigation"></div>
+
+    <div class="news top-container" style="font-size: 16px">
+        <div class="container-fluid">
+            <div class="post">
+                <header>
+                    <h1>Text Recognition in Real Scenarios with a Few Labeled Samples</h1>
+                    <hr />
+                </header>
+		    
+		    
+		<img src="../img/publications/icpr2020_fasda.png" />
+
+
+
+                <h2>Abstract</h2>
+				Scene text recognition (STR) is still a hot research topic in computer vision field due to its various applications. Existing works mainly focus on learning a general model with a huge number of synthetic text images to recognize unconstrained scene texts, and have achieved substantial progress. However, these methods are not quite applicable in many real-world scenarios where 1) high recognition accuracy is required, while 2) labeled samples are lacked. To tackle this challenging problem, this paper proposes a few-shot adversarial sequence domain adaptation (FASDA) approach to build sequence adaptation between the synthetic source domain (with many synthetic labeled samples) and a specific target domain (with only some or a few real labeled samples). This is done by simultaneously learning each character's feature representation with an attention mechanism and establishing the corresponding character-level latent subspace with adversarial learning. Our approach can maximize the character-level confusion between the source domain and the target domain, thus achieves the sequence-level adaptation with even a small number of labeled samples in the target domain. Extensive experiments on various datasets show that our method significantly outperforms the finetuning scheme, and obtains comparable performance to the state-of-the-art STR methods.
+		    <a href="https://arxiv.org/pdf/2006.12209.pdf" target="_blank" 
+                               style="color: #990000">[Paper]</a>
+
+                <hr />
+
+                <h2>Highlights Contributions</h2>
+                	<p> ❃ We
+propose a few-shot adversarial sequence domain adaptation
+approach to achieve sequence-level domain confusion by integrating a well-designed attention mechanism with sequencelevel adversarial learning strategy into a framework. </p>
+			<p> ❃ We
+implement the framework to fill the performance gap between
+general STR models and specific STR applications, and show
+that the framework can be trained end-to-end with much
+fewer sequence-level annotations.</p>
+			<p> ❃ We conduct extensive
+experiments to show that our method significantly outperforms
+traditional learning-based schemes such as finetuning, and is
+competitive with the state-of-the-art STR methods.</p>
+		    	
+
+				<hr />
+
+
+
+                <h2>Recommended Citations</h2>
+				If you find our work is helpful to your research, please feel free to cite us:
+				<br>
+				<!-- BibTex here (Make sure that this is the last code block) -->
+			<pre>
+@article{lin2020fasda, 
+	title={Text Recognition in Real Scenarios with a Few Labeled Samples}, 
+	author={Lin, Jinghuang and Cheng, Zhanzhan and Bai, Fan and Niu, Yi and Pu, Shipliang and Zhou, Shuigeng}, 
+	journal={arXiv preprint arXiv:2006.12209},
+	year={2020}, 
+}				
+		</pre>
+		<br><br>
+				
+
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/all.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".footer").load("/common/footer.html");
+            $(".navigation").load("/common/navigation.html");
+        });
+    </script>
+</body>
+</html>

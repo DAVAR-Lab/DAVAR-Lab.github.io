@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <title>DAVAR LAB</title>
+        <meta name="description" content="">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
+
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/small_logo.png">
+</head>
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
+    <div class="navigation"></div>
+
+    <div class="news top-container" style="font-size: 16px">
+        <div class="container-fluid">
+            <div class="post">
+                <header>
+                    <h1>AON: Towards Arbitrarily-Oriented Text Recognition</h1>
+                    <hr />
+                </header>
+		    
+		    
+		<img src="../img/publications/cvpr2018_aon.png" />
+
+
+
+                <h2>Abstract</h2>
+Recognizing text from natural images is a hot research topic in computer vision due to its various applications. Despite the enduring research of several decades on optical character recognition (OCR), recognizing texts from natural images is still a challenging task. This is because scene texts are often in irregular (e.g. curved, arbitrarilyoriented or seriously distorted) arrangements, which have not yet been well addressed in the literature. Existing methods on text recognition mainly work with regular (horizontal and frontal) texts and cannot be trivially generalized to handle irregular texts. In this paper, we develop the arbitrary orientation network (AON) to directly capture the deep features of irregular texts, which are combined into an attention-based decoder to generate character sequence. The whole network can be trained end-to-end by using only images and word-level annotations. Extensive experiments on various benchmarks, including the CUTE80, SVTPerspective, IIIT5k, SVT and ICDAR datasets, show that the proposed AON-based method achieves the-state-of-theart performance in irregular datasets, and is comparable to
+major existing methods in regular datasets.  
+		    <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cheng_AON_Towards_Arbitrarily-Oriented_CVPR_2018_paper.pdf" target="_blank" 
+                               style="color: #990000">[Paper]</a>
+
+                <hr />
+
+                <h2>Highlights Contributions</h2>
+		    
+		   <p> ❃ We propose the Arbitrary Orientation Network (AON) to extract scene text features in four directions and the character placement clues. </p>
+  
+  
+<p> ❃ We design a Filter Gate (FG) for fusing four-direction features with the learned placement clues. That is, FG is responsible for generating the integrated feature sequence.</p>
+  
+  
+<p> ❃ We integrate AON, FG and an attention-based decoder into the character recognition framework. The whole network can be directly trained end-to-end without any character-level bounding box annotations.</p>
+  
+  
+<p> ❃ We conduct extensive experiments on several public irregular and regular text benchmarks, which show that our method obtains state-of-the-art performance in irregular benchmarks, and is comparable to major existing methods in regular benchmarks.</p>
+
+
+				<hr />
+
+
+
+                <h2>Recommended Citations</h2>
+				If you find our work is helpful to your research, please feel free to cite us:
+				<br>
+				<!-- BibTex here (Make sure that this is the last code block) -->
+				<pre>
+@inproceedings{cheng2018aon,
+    title={AON: Towards Arbitrarily-Oriented Text Recognition},
+    author={Cheng, Zhanzhan and Xu, Yangliu and Bai, Fan and Niu, Yi and Pu, Shiliang and Zhou, Shuigeng},
+    booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+    pages={5571--5579},
+    year={2018},
+}
+					
+				
+				</pre>
+		<br><br>
+				
+
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/all.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".footer").load("/common/footer.html");
+            $(".navigation").load("/common/navigation.html");
+        });
+    </script>
+</body>
+</html>

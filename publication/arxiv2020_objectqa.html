@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <title>DAVAR LAB</title>
+        <meta name="description" content="">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
+
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/small_logo.png">
+</head>
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
+    <div class="navigation"></div>
+
+    <div class="news top-container" style="font-size: 16px">
+        <div class="container-fluid">
+            <div class="post">
+                <header>
+                    <h1>Object-QA: Towards High Reliable Object Quality Assessment</h1>
+                    <hr />
+                </header>
+		    
+		    
+		<img src="../img/publications/arxiv2020_objectqa.png" />
+
+
+
+                <h2>Abstract</h2>
+In object recognition applications, object images usually appear with different quality levels. Practically, it is very important to indicate object image qualities for better application performance, e.g. filtering out low-quality object image frames to maintain robust video object recognition results and speed up inference. However, no previous works are explicitly proposed for addressing the problem. In this paper, we define the problem of object quality assessment for the first time and propose an effective approach named Object-QA to assess high-reliable quality scores for object images. Concretely, Object-QA first employs a well-designed relative quality assessing module that learns the intra-class-level quality scores by referring to the difference between object images and their estimated templates. Then an absolute quality assessing module is designed to generate the final quality scores by aligning the quality score distributions in inter-class. Besides, Object-QA can be implemented with only object-level annotations, and is also easily deployed to a variety of object recognition tasks. To our best knowledge this is the first work to put forward the definition of this problem and conduct quantitative evaluations. Validations on 5 different datasets show that Object-QA can not only assess high-reliable quality scores according with human cognition, but also improve application performance.		    
+				<a href="https://arxiv.org/pdf/2005.13116.pdf" target="_blank" 
+                               style="color: #990000">[Paper]</a>
+
+                <hr />
+
+                <h2>Highlights Contributions</h2>
+                	<p> ❃ We give the explicit definition of object quality assessment
+problem for the first time. </p>
+			<p> ❃ We propose a general object quality assessment approach
+named Object-QA for assessing high-reliable quality scores with
+only recognition-based annotations. </p>
+			<p> ❃ Our experiments on 5 tasks, including 1 synthetic MNIST dataset
+and 4 real-world scenarios (person and vehicle re-identification,
+video text spotting, license plate recognition) demonstrate
+the effectiveness of Object-QA.
+</p>
+		    	
+
+				<hr />
+
+
+
+                <h2>Recommended Citations</h2>
+				If you find our work is helpful to your research, please feel free to cite us:
+				<br>
+				<!-- BibTex here (Make sure that this is the last code block) -->
+				<pre>
+@article{lu2020objectqa, 
+    title={Object-QA: Towards High Reliable Object Quality Assessment}, 
+    author={Lu, Jing and Zou, Baorui and Cheng, Zhanzhan and Pu, Shiliang and Zhou, Shuigeng and Niu, Yi and Wu, Fei}, 
+    journal={arXiv preprint arXiv:2005.13116},
+    year={2020}, 
+}					</pre>
+		<br><br>
+				
+
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/all.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".footer").load("/common/footer.html");
+            $(".navigation").load("/common/navigation.html");
+        });
+    </script>
+</body>
+</html>

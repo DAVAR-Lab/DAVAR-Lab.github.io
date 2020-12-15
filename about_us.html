@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<style type="text/css">
+.all{
+	overflow;hidden;
+	width:100%;
+}
+.left-side{
+	width:60%;
+	float:left;
+}
+.right-side{
+	width:29%;
+	float:right;
+}
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+
+    <title> DAVAR LAB</title>
+    <meta name="description" content="">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet'
+        type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/small_logo.png">
+</head>
+
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
+    <div class="navigation"></div>
+    <div class="news top-container">
+        <div class="container-fluid">
+            <div class="post">
+			
+				<header>
+					<h1> About Davar</h1>
+				</header>
+				<div class="all">
+				<div class="left-side">
+				<p> DAVAR is with the Hikvision Research Institute, China. It locates at Block No. 12, Technology Leader City No. 1388 Zhangdong Rd, Pudong district, Shanghai. The Founding Director of DAVAR is Mr. Zhanzhan Cheng.  
+				<br><br>
+				"DAVAR" means <span style="font-style:italic">"Document, Audio, Video Analysis and Recognition</span>". The main research interests of DAVAR include computer vision and machine learning, and some other related areas. 
+				<br><br>
+				Currently our research mainly involves: OCR system, video action analysis, sequence learning, semi-supervised and active learning, incremental learning, image quality assessment, metric learning, open set recognition, etc. 
+				<br><br>
+				DAVAR team is committed to providing secure and robust artificial intelligence technology to make world better. 
+				See Far, Go Further.<br><br>
+				</p>
+				<h1> Join us</h1>
+				<p> We recruit long/short-term interns all year round. Please send your resume to: <a style="float:left" href=mailto:changzhanzhan@hikvision.com>chengzhanzhan@hikvision.com</a></p>
+ 
+ </div>
+ <div class="right-side" style="width:350px;height:300px;border:#ccc solid 1px;" id="dituContent"></div>
+ </div>
+            </div>
+        </div>
+    </div>
+
+
+<!--引用百度地图API-->
+<style type="text/css">
+    html,body{margin:0;padding:0;}
+    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+</style>
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=NOraeOytceNxSBgQ7pY9qbrl"> </script>
+</head>
+
+
+  <!--百度地图容器-->
+  
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(121.634938,31.221834);//定义一个中心点坐标
+        map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+		 //添加gps marker和label
+	    var markergg = new BMap.Marker(point);
+	    map.addOverlay(markergg); //添加GPS marker
+	    var marker = new BMap.Marker(point);
+	    map.enableScrollWheelZoom(true);  
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    
+    initMap();//创建和初始化地图
+</script>
+
+
+    <div class="footer"></div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/all.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".footer").load("/common/footer.html");
+            $(".navigation").load("/common/navigation.html");
+        });
+    </script>
+</body>
+
+</html>

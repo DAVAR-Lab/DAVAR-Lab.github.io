@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <title>DAVAR LAB</title>
+        <meta name="description" content="">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
+
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/small_logo.png">
+</head>
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
+    <div class="navigation"></div>
+
+    <div class="news top-container" style="font-size: 16px">
+        <div class="container-fluid">
+            <div class="post">
+                <header>
+                    <h1>Learning a Domain Classifier Bank for Unsupervised Adaptive Object Detection</h1>
+                    <hr />
+                </header>
+		    
+		    
+		<img src="../img/publications/arxiv2020_da.png" />
+
+
+
+                <h2>Abstract</h2>
+				In real applications, object detectors based on deep networks still face challenges of the large domain gap between the labeled training data and unlabeled testing data. To reduce the gap, recent techniques are proposed by aligning the image/instance-level features between source and unlabeled target domains. However, these methods suffer from the suboptimal problem mainly because of ignoring the category information of object instances. To tackle this issue, we develop a fine-grained domain alignment approach with a well-designed domain classifier bank that achieves the instance-level alignment respecting to their categories. Specifically, we first employ the mean teacher paradigm to generate pseudo labels for unlabeled samples. Then we implement the class-level domain classifiers and group them together, called domain classifier bank, in which each domain classifier is responsible for aligning features of a specific class. We assemble the bare object detector with the proposed fine-grained domain alignment mechanism as the adaptive detector, and optimize it with a developed crossed adaptive weighting mechanism. Extensive experiments on three popular transferring benchmarks demonstrate the effectiveness of our method and achieve the new remarkable state-of-the-arts.
+		    <a href="https://arxiv.org/pdf/2007.02595.pdf" target="_blank" 
+                               style="color: #990000">[Paper]</a>
+
+                <hr />
+
+                <h2>Highlights Contributions</h2>
+                	<p> ❃ We address the class-level
+domain adaptation problem, and develop the domain classifier bank mechanism
+to align instance-level features according to their categories. </p>
+			<p> ❃ We assemble
+a bare detector with mean teacher as well as the designed DCBank into an
+adaptive detection framework. The whole framework is jointly optimized with a
+crossed weighting strategy which can improve both the detector and DCBank.</p>
+			<p> ❃ Our extensive experiments on three popular datasets demonstrate the effectiveness
+of our method.</p>
+		    	
+
+				<hr />
+
+
+
+                <h2>Recommended Citations</h2>
+				If you find our work is helpful to your research, please feel free to cite us:
+				<br>
+				<!-- BibTex here (Make sure that this is the last code block) -->
+				<pre>
+@article{tang2020dcb, 
+    title={Learning a Domain Classifier Bank for Unsupervised Adaptive Object Detection}, 
+    author={Tang, Sanli and Cheng, Zhanzhan and Pu, Shiliang and Guo, Dashan and Niu, Yi and Wu, Fei}, 
+    journal={arXiv preprint arXiv:2007.02595},
+    year={2020}, 
+}				</pre>
+		<br><br>
+				
+
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/all.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".footer").load("/common/footer.html");
+            $(".navigation").load("/common/navigation.html");
+        });
+    </script>
+</body>
+</html>

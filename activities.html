@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+
+    <title>DAVAR LAB</title>
+    <meta name="description" content="">
+    <link rel="alternate" type="application/rss+xml" href="feed.xml">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/main.css" rel='stylesheet' type='text/css'>
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/small_logo.png">
+
+
+    <style type="text/css">
+        .container-fluid .items {
+            border: 1px solid #EEEEEE;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .card {
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .card img {
+            width: auto;
+            height: auto;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            position: relative;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .card-content {
+            height: 30px;
+            width: 1000px;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
+    <div class="navigation"></div>
+
+    <div class="news top-container" style="font-size: 16px">
+        <div class="container-fluid">
+            <header>
+                <h1>Activities</h1>
+                <hr />
+            </header>
+            <div class="row">
+				<div class="col-lg-6 col-md-6" style="cursor: pointer;" onclick="window.open('/activity/Dishuihu.html')">
+                    <div class="items text-center">
+                        <div class="card">
+                            <img src="/activity/Dishuihu/timg.jpg" />
+                        </div>
+                        <div class="card-title">Have fun in Dishui Lake</div>
+                        <div class="card-content">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6" style="cursor: pointer;" onclick="window.open('/activity/Badminton.html')">
+                    <div class="items text-center">
+                        <div class="card">
+                            <img src="/activity/Badminton/1214_0.jpg" />
+                        </div>
+                        <div class="card-title">Champion of Badminton Competition </div>
+                        <div class="card-content">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6" style="cursor: pointer;" onclick="window.open('/activity/AAAI2019.html')">
+                    <div class="items text-center">
+                        <div class="card">
+                            <img src="/activity/AAAI2019/mmexport1549135020631.jpg" />
+                        </div>
+                        <div class="card-title"> Trip of AAAI2019 </div>
+                        <div class="card-content">
+                            
+                        </div>
+                    </div>
+                </div>
+				<div class="col-lg-6 col-md-6" style="cursor: pointer;" onclick="window.open('/activity/MM2019.html')">
+                    <div class="items text-center">
+                        <div class="card">
+                            <img src="/activity/MM2019/IMG_20191023_155429.jpg" />
+                        </div>
+                        <div class="card-title"> Trip of ACM MM2019 </div>
+                        <div class="card-content">
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/all.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".footer").load("/common/footer.html");
+            $(".navigation").load("/common/navigation.html");
+        });
+    </script>
+
+</body>
+
+</html>

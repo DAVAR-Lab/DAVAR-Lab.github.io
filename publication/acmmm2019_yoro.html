@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <title>DAVAR LAB</title>
+        <meta name="description" content="">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
+
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/small_logo.png">
+</head>
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
+    <div class="navigation"></div>
+
+    <div class="news top-container" style="font-size: 16px">
+        <div class="container-fluid">
+            <div class="post">
+                <header>
+                    <h1>You Only Recognize Once: Towards Fast Video Text Spotting</h1>
+                    <hr />
+                </header>
+		    
+		    
+		<img src="../img/publications/acmmm2019_yoro.png" />
+
+
+
+                <h2>Abstract</h2>
+		    Video text spotting is still an important research topic due to its various real-applications. 
+Previous approaches usually fall into the four-staged pipeline: 
+text detection in individual images, 
+framewisely recognizing localized text regions, 
+tracking text streams and 
+generating final results with complicated post-processing skills, 
+which might suffer from the huge computational cost as well as the interferences of low-quality text.
+In this paper, we propose a fast and robust video text spotting framework by only recognizing the localized text one-time instead of frame-wisely recognition. 
+Specifically, we first obtain text regions in videos with a well-designed spatial-temporal detector. 
+Then we concentrate on developing a novel text recommender for selecting the highest-quality text from text streams and only recognizing the selected ones. 
+Here, the recommender assembles text tracking, quality scoring and recognition into an end-to-end trainable module, 
+which not only avoids the interferences from low-quality text but also dramatically speeds up the video text spotting process. 
+In addition, we collect a larger scale video text dataset (LSVTD) for promoting the video text spotting community, 
+which contains 100 text videos from 22 different real life scenarios. 
+Extensive experiments on two public benchmarks show that our method greatly speeds up the recognition process averagely by 71 times compared with the frame-wise manner, 
+and also achieves the remarkable state-of-the-art.
+                            <a href="https://arxiv.org/pdf/1903.03299.pdf" target="_blank" 
+                               style="color: #990000">[Paper]</a>  
+							   <a href="./dataset/lsvtd.html" target="_blank" 
+                               style="color: #990000">[Dataset]</a>  
+
+                <hr />
+
+                <h2>Highlights Contributions</h2>
+		    <p> ❃ We design a novel text recommender for selecting the highest-quality text from text streams and then only recognizing the selected text regions once, which significantly speeds up the recognition process, and also improves the video text spotting performance.</p>
+		    <p> ❃ We integrate a well-designed spatial-temporal text detector and a text recommender into an unified two-stage framework YORO for fast end-to-end video text spotting. </p>
+		    <p> ❃ In order to promote the progress of video text spotting, we collect and annotate a larger scale video text dataset, which contains 100 videos from 22 different real-life situations.</p>
+		    <p> ❃ Extensive experiments demonstrate that our method is fast and robust and achieves impressive performance in video scene text reading.</p>
+                	
+
+				<hr />
+
+
+
+                <h2>Recommended Citations</h2>
+				If you find our work is helpful to your research, please feel free to cite us:
+				<br>
+				<!-- BibTex here (Make sure that this is the last code block) -->
+				<pre>
+@inproceedings{cheng2019you,
+    title={You Only Recognize Once: Towards Fast Video Text Spotting},
+    author={Cheng, Zhanzhan and Lu, Jing and Niu, Yi and Pu, Shiliang and Wu, Fei and Zhou, Shuigeng},
+    booktitle={Proceedings of the 27th ACM International Conference on Multimedia},
+    pages={855--863},
+    year={2019},
+    organization={ACM}
+}
+				</pre>
+		<br><br>
+				
+
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/all.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".footer").load("/common/footer.html");
+            $(".navigation").load("/common/navigation.html");
+        });
+    </script>
+</body>
+</html>

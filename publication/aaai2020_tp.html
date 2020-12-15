@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <title>DAVAR LAB</title>
+        <meta name="description" content="">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
+
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/small_logo.png">
+</head>
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
+    <div class="navigation"></div>
+
+    <div class="news top-container" style="font-size: 16px">
+        <div class="container-fluid">
+            <div class="post">
+                <header>
+                    <h1>Text Perceptron: Towards End-to-End Arbitrary-Shaped Text Spotting</h1>
+                    <hr />
+                </header>
+		    
+		    
+		<img src="../img/publications/aaai2020_tp.png" />
+
+
+
+                <h2>Abstract</h2>
+                Many approaches have recently been proposed to detect irregular scene text and achieved promising results. 
+				However, their localization results may not well satisfy the following text recognition part mainly because of two reasons: 
+				1) recognizing arbitrary shaped text is still a challenging task, and 
+				2) prevalent non-trainable pipeline strategies between text detection and text recognition will lead to suboptimal performances. 
+				To handle this incompatibility problem, in this paper we propose an end-to-end trainable text spotting approach named Text Perceptron. 
+				Concretely, Text Perceptron first employs an efficient segmentation-based text detector 
+				that learns the latent text reading order and boundary information. 
+				Then a novel Shape Transform Module (abbr. STM) is designed to transform the detected feature regions into regular morphologies 
+				without extra parameters. It unites text detection and the following recognition part into a whole framework, 
+				and helps the whole network achieve global optimization. Experiments show that our method achieves competitive performance 
+				on two standard text benchmarks, i.e., ICDAR 2013 and ICDAR 2015, 
+				and also obviously outperforms existing methods on irregular text benchmarks SCUT-CTW1500 and Total-Text.
+		    <a href="https://arxiv.org/pdf/2002.06820" target="_blank" 
+                               style="color: #990000">[Paper]</a>
+                            <a href="https://github.com/DAVAR-Lab" target="_blank"
+                                style="color: #990000">[Code]</a>
+							<a href="/files/aaai2020_tp/AAAI20-TP-Supplementary.pdf" target="_blank"
+                                style="color: #990000">[Supplementary]</a>
+								<a href="/files/aaai2020_tp/AAAI20-TP-Poster.pdf" target="_blank"
+                                style="color: #990000">[Poster]</a>
+								<a href="https://www.bilibili.com/video/BV1Wz4y1k7Dc" target="_blank"
+                                style="color: #990000">[Video]</a>
+								
+                <hr />
+
+                <h2>Highlights Contributions</h2>
+                	<p> ❃ We design an efficient <strong><i>order-aware</strong></i> text detector to extract <strong><i>arbitrary-shaped</strong></i> text. </p>
+			<p> ❃ We develop the differentiable <strong><i>S</strong></i><i>hape</i> <strong><i>T</strong></i><i>ransform</i> <strong><i>M</strong></i><i>odule</i> (<strong><i>STM</strong></i>) devoting to optimizing both detection and recognition in an end-to-end trainable manner.</p>
+			<p> ❃ Our extensive experiments show that our method achieves <strong><i>competitive results on two regular text benchmarks</strong></i>, and also <strong><i>significantly surpasses previous methods on two irregular text benchmarks</strong></i></p>
+
+				<hr />
+
+
+
+                <h2>Recommended Citations</h2>
+				If you find our work is helpful to your research, please feel free to cite us:
+				<br>
+				<!-- BibTex here (Make sure that this is the last code block) -->
+				<pre>
+@inproceedings{qiao2020text,
+    title={Text Perceptron: Towards End-to-End Arbitrary-Shaped Text Spotting},
+    author={Qiao, Liang and Tang, Sanli and Cheng, Zhanzhan and Xu, Yunlu and Niu, Yi and Pu, Shiliang and Wu, Fei},			
+    booktitle={Proceedings of the Thirty-Fourth AAAI Conference on Artificial Intelligence},
+    pages={11899-11907},
+    year={2020},
+}				
+				</pre>
+		<br><br>
+				
+
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/all.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".footer").load("/common/footer.html");
+            $(".navigation").load("/common/navigation.html");
+        });
+    </script>
+</body>
+</html>

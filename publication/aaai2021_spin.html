@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <title>DAVAR LAB</title>
+        <meta name="description" content="">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
+
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/small_logo.png">
+</head>
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
+    <div class="navigation"></div>
+
+    <div class="news top-container" style="font-size: 16px">
+        <div class="container-fluid">
+            <div class="post">
+                <header>
+                    <h1>SPIN: Structure-Preserving Inner Offset Network for Scene Text Recognition
+</h1>
+                    <hr />
+                </header>
+		    
+		    
+		<img src="../img/publications/aaai2021_spin.png" />
+
+
+
+                <h2>Abstract</h2>
+                Arbitrary text appearance poses a great challenge in scene text recognition tasks. Existing works mostly handle with the problem in consideration of the shape distortion, including perspective distortions, line curvature or other style variations. Therefore, methods based on spatial transformers are extensively studied. However, chromatic difficulties in complex scenes have not been paid much attention on. In this work, we introduce a new learnable geometric-unrelated module, the Structure-Preserving Inner Offset Network (SPIN), which allows the color manipulation of source data within the network. This differentiable module can be inserted before any recognition architecture to ease the downstream tasks, giving neural networks the ability to actively transform input intensity rather than the existing spatial rectification. It can also serve as a complementary module to known spatial transformations and work in both independent and collaborative ways with them. Extensive experiments show that the use of SPIN results in a significant improvement on multiple text recognition benchmarks compared to the state-of-the-arts.
+		    <a href="https://arxiv.org/pdf/2005.13117.pdf" target="_blank" 
+                               style="color: #990000">[Paper]</a>
+  
+                <hr />
+
+                <h2>Highlights Contributions</h2>
+                	<p> ❃ To the best of our knowledge, it is the first work to mainly handle with the
+chromatic distortions in STR tasks, rather than the extensively discussed spatial
+ones. We also introduce the novel concept of inner and outer offsets and propose
+a novel module SPIN to rectify the images with chromatic transformation. </p>
+			<p> ❃ The proposed SPIN can be easily integrated into deep neural networks and
+trained in an end-to-end way without additional annotations and extra losses.
+Unlike the typical spatial transformation based on STN, which is tied to tedious
+initialization schemes, the SPIN requires no need of sophisticated
+initialization, which enables it to be a more flexible module.</p>
+			<p> ❃ The proposed SPIN achieves impressive effectiveness to recognize regular
+and irregular scene text recognition. Furthermore, the combination of chromatic
+and geometric transformations has been experimentally proved to be practicable
+and to outperform existing techniques on multiple benchmarks.</p>
+
+				<hr />
+
+
+
+                <h2>Recommended Citations</h2>
+				If you find our work is helpful to your research, please feel free to cite us:
+				<br>
+				<!-- BibTex here (Make sure that this is the last code block) -->
+        <pre>
+@article{zhang2021spin, 
+    title={SPIN: Structure-Preserving Inner Offset Network for Scene Text Recognition}, 
+    author={Zhang, Chengwei and Xu, Yunlu and Cheng, Zhanzhan and Pu, Shiliang and Niu, Yi and Wu, Fei and Zou Futai}, 
+    journal={arXiv preprint arXiv:2005.13117},
+    year={2020}, 
+}
+        </pre>
+
+		<br><br>
+				
+
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/all.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".footer").load("/common/footer.html");
+            $(".navigation").load("/common/navigation.html");
+        });
+    </script>
+</body>
+</html>
