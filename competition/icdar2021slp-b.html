@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+
+    <title>DAVAR LAB</title>
+    <meta name="description" content="">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet'
+        type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/small_logo.png">
+</head>
+
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
+    <div class="navigation"></div>
+
+    <div class="news top-container">
+        <div class="container-fluid">
+            <div id="primarycontent">
+                <center>
+                    <h2>Table recognition (ICDAR 2021 Competition on Scientific Literature Parsing, Task B) </h2>
+                </center>
+                <center>
+                    <h3>
+                        <a href="https://davar-lab.github.io/" target="_blank">DAVAR LAB</a>
+                    </h3>
+                </center>
+                <center>
+                    <h3>
+                        <a href="https://aieval.draco.res.ibm.com/challenge/40/overview"
+                            target="_blank" style="color: #990000">Official Website</a>
+                    </h3>
+                </center>
+				 <center>
+                    <p>
+                        <a href="https://github.com/ibm-aur-nlp/PubLayNet/blob/master/ICDAR_SLR_competition/ICDAR_2021_Scientific_Literature_Parsing.pdf"
+                            target="_blank" style="color: #990000">Competition Report</a>
+                    <p>
+                </center>
+                
+                <p></p>
+
+
+                <p>
+                    <h2>Introduction</h2>
+
+                    <div style="font-size:14px">
+                        <p>Participants of this competition need to develop a model that can convert images of tabular data into the corresponding HTML code. The targeted HTML code should correctly represent the structure of the table and the content of each cell. HTML tags that define the font style including bold, italic, strike through, superscript, and subscript should be included in cell content. The HTML code does NOT need to reconstruct the appearance of tables such as border lines, background color, font, font size, or font color. The figure below illustrates an example table image and its targeted HTML code. Note that the targeted HTML code does not contain the settings about border lines, background color of the header row, or the blue font color of 'Woof'.
+						
+                        </p>
+						
+						<center>
+						<img src="/img/competition/icdar2021slp-b.png" width="1000">
+					   </center>
+                        <p>
+                          We have won the <strong>1st </strong> place out of 30 teams in this timed challenge!
+                        </p>
+
+                    <h2>System Description</h2>
+                   <p>
+						The table recognition framework contains two main processes: table cells generation and structure inference.
+				   </p>
+					<p>	(1) Table cells generation is built based on the Mask-RCNN detection model.
+						Specifically, the model is trained to learn the row/column aligned cell-level
+						bounding boxes with corresponding mask of text content region. We introduce
+						the pyramid mask supervision and adopt a large backbone of HRNet-W48 Cas-
+						cade Mask RCNN to obtain the reliable aligned bounding boxes. In addition, we
+						train a single-line text detection model with an attention-based text recognition
+						model to provide the OCR information. This is simply achieved by selecting the
+						instances that only contain single-line text. We also adopt multi-scale ensemble
+						strategy on both the cell and single-line text detection models to further improve
+						performance.</p>
+					<p>	(2) In the structure inference stage, the bounding boxes for cells can be
+						horizontally/vertically connected according to their alignment overlaps. The
+						row/column information is then generated via a Maximum Clique Search pro-
+						cess, during which empty cells can be easily located.
+					</p>
+					<p>	To handle some special cases, we train another table detection model to filter
+						out text not belonging to the table.
+                    </p>
+					
+					<p> For more details, please refer to our research paper: <a href="/publication/icdar2021_lgpma.html"> LGPMA: Complicated Table Structure
+Recognition with Local and Global Pyramid Mask Alignment </a>  
+
+					
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/all.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".footer").load("/common/footer.html");
+            $(".navigation").load("/common/navigation.html");
+        });
+    </script>
+
+</body>
+
+</html>
