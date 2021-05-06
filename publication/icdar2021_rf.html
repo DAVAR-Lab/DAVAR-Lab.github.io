@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <title>DAVAR LAB</title>
+        <meta name="description" content="">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
+
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/small_logo.png">
+</head>
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
+    <div class="navigation"></div>
+
+    <div class="news top-container" style="font-size: 16px">
+        <div class="container-fluid">
+            <div class="post">
+                <header>
+                    <h1>Reciprocal Feature Learning via Explicit and
+Implicit Tasks in Scene Text Recognition
+
+</h1>
+                    <hr />
+                </header>
+		    
+		    
+		<img src="../img/publications/icdar2021_rf.png" />
+
+
+
+                <h2>Abstract</h2>
+Text recognition is a popular topic in recent years for its
+broad applications. In this work, we excavate the implicit task, character
+counting within the traditional text recognition, without additional
+labor annotation cost. The implicit task plays as an auxiliary branch
+for complementing the sequential recognition. We design a two-branch
+reciprocal feature learning framework in order to adequately utilize the
+features from both the tasks. Through exploiting the complementary effect
+between explicit and implicit tasks, the feature is reliably enhanced.
+Extensive experiments on 7 benchmarks show the advantages of the
+proposed methods in both text recognition and the new-built character
+counting tasks. In addition, it is convenient yet effective to equip
+with variable networks and tasks. We offer abundant ablation studies,
+generalizing experiments with deeper understanding on the tasks. Code
+is available.		    
+<a href="#" target="_blank" 
+                               style="color: #990000">[Paper]</a>
+  
+                <hr />
+
+                <h2>Highlights Contributions</h2>
+                	<p> ❃ We propose a unified framework VSR for document layout analysis, combin-
+ing vision, semantics and relations. </p>
+			<p> ❃ We dig the implicit task in the traditional STR, i.e., character counting,
+without any extra annotation cost. The counting network supervised by new ex-
+ploited labels can be regarded as an auxiliary part in addition to the recognition
+task, facilitating positive outcomes. Also, we offer a strong baseline for the sole
+newly-built character counting task based on the existing STR datasets.</p>
+			<p> ❃ We propose a multi-task learning framework called RF-L for STR through
+exploiting the complementary effect between two different tasks, word recogni-
+tion and counting respectively. And the two tasks are learned in their own branch,
+in interaction to the other, via a simple yet effective RF-Adaptor module.</p>
+			<p> ❃ The proposed method achieves impressive improvements in multiple bench-
+marks, not only in STR tasks but also in counting. The auxiliary network and
+the adaptor can be easily integrated into deep neural network with any other
+scene text recognition method, which boosts the single task via the proposed
+RF-L framework as verified in extensive experiments.</p>
+
+				<hr />
+
+
+
+                <h2>Recommended Citations</h2>
+				If you find our work is helpful to your research, please feel free to cite us:
+				<br>
+				<!-- BibTex here (Make sure that this is the last code block) -->
+        <pre>
+@article{jiang2021Reciprocal, 
+    title={Reciprocal Feature Learning via Explicit and Implicit Tasks in Scene Text Recognition}, 
+    author={Jiang, Hui and Xu, Yunlu and Cheng, Zhanzhan and Pu, Shiliang and Niu, Yi and Ren, Wenqi and Wu, Fei and Tan, Wenming}
+    year={2021}, 
+}
+        </pre>
+
+		<br><br>
+				
+
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/all.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".footer").load("/common/footer.html");
+            $(".navigation").load("/common/navigation.html");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <title>DAVAR LAB</title>
+        <meta name="description" content="">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
+
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/small_logo.png">
+</head>
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
+    <div class="navigation"></div>
+
+    <div class="news top-container" style="font-size: 16px">
+        <div class="container-fluid">
+            <div class="post">
+                <header>
+                    <h1>VSR: A Unified Framework for Document
+Layout Analysis combining Vision, Semantics
+and Relations
+
+</h1>
+                    <hr />
+                </header>
+		    
+		    
+		<img src="../img/publications/icdar2021_vsr.png" />
+
+
+
+                <h2>Abstract</h2>
+Document layout analysis is crucial for understanding document
+structures. On this task, vision and semantics of documents, and
+relations between layout components contribute to the understanding
+process. Though many works have been proposed to exploit the above information,
+they show unsatisfactory results. NLP-based methods model
+layout analysis as a sequence labeling task and show insufficient capabilities
+in layout modeling. CV-based methods model layout analysis as a
+detection or segmentation task, but bear limitations of inefficient modality
+fusion and lack of relation modeling between layout components. To
+address the above limitations, we propose a unified framework VSR for
+document layout analysis, combining vision, semantics and relations. VSR
+supports both NLP-based and CV-based methods. Specifically, we first
+introduce vision through document image and semantics through text
+embedding maps. Then, modality-specific visual and semantic features
+are extracted using a two-stream network, which are adaptively fused to
+make full use of complementary information. Finally, given component
+candidates, a relation module based on graph neural network is incorported
+to model relations between components and output final results.
+On three popular benchmarks, it outperforms previous models by large
+margins.		    
+<a href="#" target="_blank" 
+                               style="color: #990000">[Paper]</a>
+  
+                <hr />
+
+                <h2>Highlights Contributions</h2>
+                	<p> ❃ We propose a unified framework VSR for document layout analysis, combin-
+ing vision, semantics and relations. </p>
+			<p> ❃ To exploit vision and semantics effectively, we propose a two-stream net-
+work to extract modality-specific visual and semantic features, and fuse them
+adaptively through an adaptive aggregation module. Besides, we also explore
+document semantics at different granularities.</p>
+			<p> ❃ A GNN-based relation module is incorporated to model relations between
+document components, and it supports relation modeling in both NLP-based
+and CV-based methods.</p>
+			<p> ❃ We perform extensive evaluations of VSR and on three public benchmarks,
+VSR shows significant improvements compared to previous models.</p>
+
+				<hr />
+
+
+
+                <h2>Recommended Citations</h2>
+				If you find our work is helpful to your research, please feel free to cite us:
+				<br>
+				<!-- BibTex here (Make sure that this is the last code block) -->
+        <pre>
+@article{zhang2021vsr, 
+    title={VSR: A Unified Framework for Document Layout Analysis combining Vision, Semantics and Relations}, 
+    author={Zhang, Peng and Li, Can and Qiao, Liang and Cheng, Zhanzhan and Pu, Shiliang and Niu, Yi and Wu, Fei}
+    year={2021}, 
+}
+        </pre>
+
+		<br><br>
+				
+
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/all.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".footer").load("/common/footer.html");
+            $(".navigation").load("/common/navigation.html");
+        });
+    </script>
+</body>
+</html>

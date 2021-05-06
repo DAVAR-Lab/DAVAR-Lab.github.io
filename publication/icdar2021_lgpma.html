@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <title>DAVAR LAB</title>
+        <meta name="description" content="">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
+
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/small_logo.png">
+</head>
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
+    <div class="navigation"></div>
+
+    <div class="news top-container" style="font-size: 16px">
+        <div class="container-fluid">
+            <div class="post">
+                <header>
+                    <h1>LGPMA: Complicated Table Structure Recognition with Local and Global Pyramid Mask Alignment
+</h1>
+                    <hr />
+                </header>
+		    
+		    
+		<img src="../img/publications/icdar2021_lgpma.png" />
+
+
+
+                <h2>Abstract</h2>
+Table structure recognition is a challenging task due to the
+various structures and complicated cell spanning relations. Previous methods
+handled the problem starting from elements in diferent granularities
+(rows/columns, text regions), which somehow fell into the issues like
+lossy heuristic rules or neglect of empty cell division. Based on table
+structure characteristics, we find that obtaining the aligned bounding
+boxes of text region can effectively maintain the entire relevant range
+of different cells. However, the aligned bounding boxes are hard to be
+accurately predicted due to the visual ambiguities. In this paper, we aim
+to obtain more reliable aligned bounding boxes by fully utilizing the visual
+information from both text regions in proposed local features and
+cell relations in global features. Specifically, we propose the framework
+of Local and Global Pyramid Mask Alignment (LGPMA), which adopts
+the soft pyramid mask learning mechanism in both the local and global
+feature maps. It allows the predicted boundaries of bounding boxes
+to break through the limitation of original proposals. A pyramid mask
+re-scoring module is then integrated to compromise the local and global
+information and refine the predicted boundaries. Finally, we propose a
+robust table structure recovery pipeline to obtain the final structure, in
+which we also effectively solve the problems of empty cells locating and
+division. Experimental results show that the proposed method achieves
+competitive and even new state-of-the-art performance on several public
+benchmarks.		    
+<a href="#" target="_blank" 
+                               style="color: #990000">[Paper]</a>
+  
+                <hr />
+
+                <h2>Highlights Contributions</h2>
+                	<p> ❃ We propose a novel
+framework called LGPMA Network that compromises the visual features from
+both local and global perspectives. The model makes full use of the information
+from the local and global features through a proposed mask re-scoring strategy,
+which can obtain more reliable aligned cell regions. </p>
+			<p> ❃ We introduce a uniform
+table structure recovering pipeline, including cell matching, empty cell searching,
+and empty cell merging. Both non-empty cells and empty cells can be located
+and split effcaciously.</p>
+			<p> ❃ Extensive experiments show that our method achieves
+competitive and even state-of-the-art results on several popular benchmarks.</p>
+				<hr />
+
+
+
+                <h2>Recommended Citations</h2>
+				If you find our work is helpful to your research, please feel free to cite us:
+				<br>
+				<!-- BibTex here (Make sure that this is the last code block) -->
+        <pre>
+@article{qiao2021lgpma, 
+    title={LGPMA: Complicated Table Structure Recognition with Local and Global Pyramid Mask Alignment}, 
+    author={Qiao, Liang and Li, Zaisheng and Cheng, Zhanzhan and Zhang, Peng and Pu, Shiliang and Niu, Yi and Ren, Wenqi and Tan, Wenming and Wu, Fei}
+    booktitle={ICDAR},
+    year={2021}, 
+}
+        </pre>
+
+		<br><br>
+				
+
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/all.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".footer").load("/common/footer.html");
+            $(".navigation").load("/common/navigation.html");
+        });
+    </script>
+</body>
+</html>
