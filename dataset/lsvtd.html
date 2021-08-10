@@ -53,12 +53,12 @@
                     <h2>Introduction</h2>
 
                     <div style="font-size:14px">
-                        <p>Here, we release a large-scale video text dataset named LSVTD. In recent years, research in video scene text still remains unpopular in contrast to its promising application prospect. The existing video scene text datasets are limited on the scale of video items and scenarios, which may restrain research of video scene text spotting. Then we collect and annotate LSVTD, which contains 100 scene videos acquired from 21 typical real-life scenarios.
+                        <p>Here, we release a large-scale video text dataset named LSVTD. In recent years, research in video scene text still remains unpopular in contrast to its promising application prospect. The existing video scene text datasets are limited on the scale of video items and scenarios, which may restrain research of video scene text spotting. Then we collect and annotate LSVTD, which contains 129 scene videos acquired from 21 typical real-life scenarios.
 						
                         </p>
 
                         <p>
-                            Note that, in the origin paper, we have decaleard that LSVTD is collected from 22 scenes. However, due to some privacy policy, we have to remove 1 video text scenario (including 5 videos), leading to 21 scenarios with 95 videos keeped. Even so, we then supplement 2, 1 and 2 videos for city road, street view and bookstore scenarios, respectively. Besides, we also refine the dataset by removing some segments of background frames without text content.
+                            The dataset contains 129 video clips (ranging from several seconds to over 1 minutes long) from 21 real-life scenes. It was extended on the basis of LSVTD dataset by addding 15 videos for 'harbor surveillance' scenario and 14 videos for 'train watch' scenario,  for the purpose of solving video text spotting problem in industrial transportation applications.
                         </p>
 
                         <p>
@@ -66,9 +66,13 @@
                         </p>
 
                         <p>
-                            <li> <strong>Much larger scale.</strong> LSVTD has 100 videos, consists of more than 65k frames and 563k instances.</li>
-							<li> <strong>More diversified scenarios.</strong> LSVTD covers a wide range of 13 indoor (eg. bookstore, shopping mall) and 8 outdoor (eg. highway, city road) scenarios. The variety of scenarios challenges text spotting algorithms to achieve robust performance.</li>
-							<li> <strong>Multilingual text instances.</strong> LSVTD contains text with more than two kinds of languages (English and Chinese etc.), which are further divided into 2 major categories: Latin and Non-Latin. We additionally label this attribute for the convenience of evaluation for different algorithms. In addition, each text region is labeled with quality score.</li>
+                            <li> <strong>Larger scale.</strong> it contains 129 video clips, larger than most existing scene video text datasets.</li>
+							<li> <strong>Diversified scenarios.</strong> it covers 21 indoor and outdoor real-life scenarios, see the figure left</li>
+							<li> <strong> Different capture devices</strong>videos are collected with multiple different kinds of video cameras:
+							(1) mobile phone cameras in various indoor scenarios (e.g. bookstore and office building) and outdoor street views;
+							(2) HD cameras in traffic and harbor surveillance;
+							(3) And Car-DVR cameras in fast-moving outdoor scenarios (e.g. city road, highway) </li>
+							<li> <strong>Multilingual text instances.</strong> the dataset contains multiple languages which are divided into 2 major categories: alphanumeric and non-alphanumeric.</li>
 
                         </p>
 
@@ -76,13 +80,11 @@
 
                     <h2>Dataset released</h2>
                     <p>
-                        <li> <strong>Videos</strong>: 100 videos are provided in total, in which 66 videos for training and 34 videos for testing.</li>
+                        <li> <strong>Videos</strong>: 129 videos are provided in total.</li>
 						
 						<li> <strong>Annotations</strong>: both of the training (.xml) and testing (.xml) are provided.</li>
 						
-						<p> If you need evaluate your algorithm on the testing set, please send us the predicted results (same as the annotation format) by email. We will give you the evaluation results as soon as possible. In future, we will consider to add the on-line evaluation server or provide a evaluation tool.</p>
-						
-						<li><strong>Dataset request</strong>: If you need this dataset, please email us [See Contact]. We will share a download link with you. Tips: Please tell us your name and institute in your email.</li>
+						<li><strong>Dataset access</strong>: We relase the dataset for open access in <a href="http://tc11.cvc.uab.es/datasets/LSVTD_1">[link]</a> </li>
                     </p>
 
                     <h2>Contact</h2>
@@ -95,6 +97,7 @@
 					
 					
 					<h2> Change Log</h2>
+					<li>2021-08-10 (GMT+8): add other 29 video clips. Current version is used in the ICDAR2021 competition</li>
 					<li>2021-06-22 (GMT+8): testing dataset available.</li>
 					<li>2020-03-06 (GMT+8): dataset update by removing some consecutive background frames and adding 5 extra videos</li>
 					<li>2019-10-25 (GMT+8): dataset released</li>
