@@ -14,12 +14,12 @@ For 'Strong Baselines on Four Categories of VRD', we also provide the entity-lev
 ### Evaluation Protocols
 - For detection task, the precision (*abbr.*```PRE$_d$```), recall (*abbr.*```REC$_d$```) and F-measure (*abbr.*```F$_d$-m```) are calculated by following the [IoU evaluation strategy](https://rrc.cvc.uab.es/?ch=4&com=mymethods&task=1) in ICDAR 2015 robust reading competition. The IoU threshold is set to 0.5。
 - For recognition task, the accuracy results (*abbr.*```ACC```) are shown as 
-	<center><img src="attachments/acc.png" align="center"/></center>
+	<center><img src="attachments/acc.png" width="450"/></center>
    
     where a text is correctly predicted if and only if all characters are matched w.r.t its ground truth.
 - For the end-to-end text spotting task, the precision (*abbr.*```PRE$_r$```), recall (*abbr.*```REC$_r$```) and F-measure (*abbr.*```F$_r$-m```) are same to the [end-to-end evaluation](https://rrc.cvc.uab.es/?ch=4&com=mymethods&task=1) in ICDAR 2015 robust reading competition.
 - For the information extraction task, the entity precision (*abbr.*```ePRE```), entity recall (*abbr.*```eREC```) and entity F-measure (*abbr.*```eF1```) are used as
-     <center><img src="attachments/ef1.png" align="center"/></center>
+     <center><img src="attachments/ef1.png"width="450"/></center>
 	
     where an extract text entity is treated as correct if its character content and category of the extracted text matches the groundtruth; Otherwise, denoted as incorrect. 
     
