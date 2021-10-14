@@ -1,85 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index, follow">
+
     <title>DAVAR LAB</title>
-        <meta name="description" content="">
+    <meta name="description" content="">
     <link rel="alternate" type="application/rss+xml" href="/feed.xml">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
 
-
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet'
+        type='text/css'>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="/img/small_logo.png">
 </head>
+
 <body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
     <div class="navigation"></div>
 
-    <div class="news top-container" style="font-size: 16px">
+    <div class="news top-container">
         <div class="container-fluid">
-            <div class="post">
-                <header>
-                    <h1>TRIE: End-to-End Text Reading and Information Extraction for
-Document Understanding</h1>
-                    <hr />
-                </header>
-		    
-		    
-		<img src="../img/publications/acmmm2020_trie.png" />
-
-
-
-                <h2>Abstract</h2>
-                Since real-world ubiquitous documents (e.g., invoices, tickets, resumes and leaflets) contain rich information, automatic document image understanding has become a hot topic. Most existing works decouple the problem into two separate tasks, (1) text reading for detecting and recognizing texts in images and (2) information extraction for analyzing and extracting key elements from previously extracted plain text. However, they mainly focus on improving information extraction task, while neglecting the fact that text reading and information extraction are mutually correlated. In this paper, we propose a unified end-to-end text reading and information extraction network, where the two tasks can reinforce each other. Specifically, the multimodal visual and textual features of text reading are fused for information extraction and in turn, the semantics in information extraction contribute to the optimization of text reading. On three real-world datasets with diverse document images (from fixed layout to variable layout, from structured text to semi-structured text), our proposed method significantly outperforms the state-of-the-art methods in both efficiency and accuracy.
-		    <a href="https://arxiv.org/abs/2005.13118" target="_blank" 
-                               style="color: #990000">[Paper]</a>
-  
-                <hr />
-
-                <h2>Highlights Contributions</h2>
-                	<p> ❃ We propose an end-to-end trainable framework for simultaneous text reading and information extraction in VRD understanding.
-The whole framework can be trained end-to-end from scratch, with
-no need of stagewise training strategies. </p>
-			<p> ❃ We design a multimodal context block to bridge the OCR and
-IE modules. To the best of our knowledge, it is the first work to mine
-the mutual influence of text reading and information extraction.</p>
-			<p> ❃ We perform extensive evaluations on our framework and show
-superior performance compared with the state-of-the-art counterparts
-both in efficiency and accuracy on three real-world benchmarks.
-Note that those three benchmarks cover diverse types of document
-images, from fixed to variable layouts, from structured to semistructured text types.</p>
-
-				<hr />
-
-
-
-                <h2>Recommended Citations</h2>
-				If you find our work is helpful to your research, please feel free to cite us:
-				<br>
-				<!-- BibTex here (Make sure that this is the last code block) -->
-        <pre>
-@inproceedings{zhang2020trie, 
-    title={TRIE: End-to-End Text Reading and Information Extraction for Document Understanding}, 
-    author={Zhang, Peng and Xu, Yunlu and Cheng, Zhanzhan and Pu, Shiliang and Lu, Jing and Qiao, Liang and Niu, Yi and Wu, Fei}, 
-    booktitle={Proceedings of the 28th ACM International Conference on Multimedia}, 
-    pages={1413-1422}, 
-    year={2020}, 
-    organization={ACM} 
-}
-        
-        </pre>
-
-		<br><br>
-				
-
+            <div id="content">
                 
             </div>
         </div>
@@ -89,11 +38,43 @@ images, from fixed to variable layouts, from structured to semistructured text t
     <script src="/js/jquery.min.js"></script>
     <script src="/js/all.min.js"></script>
 
-    <script>
+	 <script src="/js/marked.min.js"></script>
+    <link rel="stylesheet" href="/css/github-markdown.min.css">
+    <style>
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+        }
+
+        @media (max-width: 767px) {
+            .markdown-body {
+                padding: 15px;
+            }
+        }
+		.container-fluid img {
+			max-width:80%
+		}
+    </style>
+
+    <script>        
         $(document).ready(function () {
             $(".footer").load("/common/footer.html");
             $(".navigation").load("/common/navigation.html");
+
+        });
+
+        $.ajax({
+            type: "GET", //请求方式
+            url: "/publication/md/TRIE++.md", //地址，就是json文件的请求路径
+            dataType: "text", //数据类型可以为 text xml json  script  jsonp
+            success: function (result) { //返回的参数就是 action里面所有的有get和set方法的参数
+                document.getElementById('content').innerHTML = marked(result);
+            }
         });
     </script>
 </body>
+
 </html>

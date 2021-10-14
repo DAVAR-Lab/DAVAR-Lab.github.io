@@ -28,95 +28,8 @@
 
     <div class="news top-container">
         <div class="container-fluid">
-            <div id="primarycontent">
-                <center>
-                    <h2>A Large-scale Video Text Dataset</h2>
-                </center>
-                <center>
-                    <h3>
-                        <a href="https://davar-lab.github.io/" target="_blank">DAVAR LAB</a>
-                    </h3>
-                </center>
-                <center>
-                    <h3>
-                        <a href="https://arxiv.org/pdf/1903.03299.pdf"
-                            target="_blank" style="color: #990000">[Download (Please email us [See Contact])]</a>
-                    </h3>
-                </center>
-                <center>
-                    <img src="/img/dataset/lsvtd/dataset.png" width="1000">
-                </center>
-                <p></p>
-
-
-                <p>
-                    <h2>Introduction</h2>
-
-                    <div style="font-size:14px">
-                        <p>Here, we release a large-scale video text dataset named LSVTD. In recent years, research in video scene text still remains unpopular in contrast to its promising application prospect. The existing video scene text datasets are limited on the scale of video items and scenarios, which may restrain research of video scene text spotting. Then we collect and annotate LSVTD, which contains 129 scene videos acquired from 21 typical real-life scenarios.
-						
-                        </p>
-
-                        <p>
-                            The dataset contains 129 video clips (ranging from several seconds to over 1 minutes long) from 21 real-life scenes. It was extended on the basis of LSVTD dataset by addding 15 videos for 'harbor surveillance' scenario and 14 videos for 'train watch' scenario,  for the purpose of solving video text spotting problem in industrial transportation applications.
-                        </p>
-
-                        <p>
-                            LSVTD mainly characterized is described in detail as follows:
-                        </p>
-
-                        <p>
-                            <li> <strong>Larger scale.</strong> it contains 129 video clips, larger than most existing scene video text datasets.</li>
-							<li> <strong>Diversified scenarios.</strong> it covers 21 indoor and outdoor real-life scenarios, see the figure left</li>
-							<li> <strong> Different capture devices</strong>videos are collected with multiple different kinds of video cameras:
-							(1) mobile phone cameras in various indoor scenarios (e.g. bookstore and office building) and outdoor street views;
-							(2) HD cameras in traffic and harbor surveillance;
-							(3) And Car-DVR cameras in fast-moving outdoor scenarios (e.g. city road, highway) </li>
-							<li> <strong>Multilingual text instances.</strong> the dataset contains multiple languages which are divided into 2 major categories: alphanumeric and non-alphanumeric.</li>
-
-                        </p>
-
-                    </div>
-
-                    <h2>Dataset released</h2>
-                    <p>
-                        <li> <strong>Videos</strong>: 129 videos are provided in total.</li>
-						
-						<li> <strong>Annotations</strong>: both of the training (.xml) and testing (.xml) are provided.</li>
-						
-						<li><strong>Dataset access</strong>: We relase the dataset for open access in <a href="http://tc11.cvc.uab.es/datasets/LSVTD_1">[link]</a> </li>
-                    </p>
-
-                    <h2>Contact</h2>
-					<p>If you have any questions about the dataset, please contact Jing Lu or Zhanzhan Cheng .(lujing6kh@163.com or 11821104@zju.edu.cn).</p>
-					
-					<h2>Terms of Use</h2>
-					
-					<li> The public annotations belong to Zhejiang University and are licensed under the <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. </li>
-					<li> The images belong to Zhejiang University and are licensed under the <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</li>
-					
-					
-					<h2> Change Log</h2>
-					<li>2021-08-10 (GMT+8): add other 29 video clips. Current version is used in the ICDAR2021 competition</li>
-					<li>2021-06-22 (GMT+8): testing dataset available.</li>
-					<li>2020-03-06 (GMT+8): dataset update by removing some consecutive background frames and adding 5 extra videos</li>
-					<li>2019-10-25 (GMT+8): dataset released</li>
-					
-					
-                    <h2>Recommended Citation</h2>
-                    If you find this dataset is helpful to your research, please feel free to cite us:
-
-                    <pre>
-@inproceedings{cheng2019you, 
-			title={You Only Recognize Once: Towards Fast Video Text Spotting}, 
-			author={Cheng, Zhanzhan and Lu, Jing and Niu, Yi and Pu, Shiliang and Wu, Fei and Zhou, Shuigeng}, 
-			booktitle={Proceedings of the 27th ACM International Conference on Multimedia}, 
-			pages={855–863}, 
-			year={2019}, 
-			organization={ACM} 
-			}
-}</pre>
-                </p>
+            <div id="content">
+                
             </div>
         </div>
     </div>
@@ -125,13 +38,43 @@
     <script src="/js/jquery.min.js"></script>
     <script src="/js/all.min.js"></script>
 
-    <script>
+	 <script src="/js/marked.min.js"></script>
+    <link rel="stylesheet" href="/css/github-markdown.min.css">
+    <style>
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+        }
+
+        @media (max-width: 767px) {
+            .markdown-body {
+                padding: 15px;
+            }
+        }
+		.container-fluid img {
+			max-width:80%
+		}
+    </style>
+
+    <script>        
         $(document).ready(function () {
             $(".footer").load("/common/footer.html");
             $(".navigation").load("/common/navigation.html");
+
+        });
+
+        $.ajax({
+            type: "GET", //请求方式
+            url: "/dataset/md/VRD-datasets.md", //地址，就是json文件的请求路径
+            dataType: "text", //数据类型可以为 text xml json  script  jsonp
+            success: function (result) { //返回的参数就是 action里面所有的有get和set方法的参数
+                document.getElementById('content').innerHTML = marked(result);
+            }
         });
     </script>
-
 </body>
 
 </html>
