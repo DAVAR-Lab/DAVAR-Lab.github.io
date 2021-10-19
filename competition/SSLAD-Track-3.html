@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+
+    <title>DAVAR LAB</title>
+    <meta name="description" content="">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet'
+        type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/small_logo.png">
+</head>
+
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
+    <div class="navigation"></div>
+
+    <div class="news top-container">
+        <div class="container-fluid">
+            <div id="primarycontent">
+                <center>
+                    <h2>ICCV 2021 Workshop SSLAD Track 3B - 2D object detection </h2>
+                </center>
+                <center>
+                    <h3>
+                        <a href="https://davar-lab.github.io/" target="_blank">DAVAR LAB</a>
+                    </h3>
+                </center>
+                <center>
+                    <h3>
+                        <a href="https://competitions.codalab.org/competitions/33288"
+                            target="_blank" style="color: #990000">Official Website</a>
+                    </h3>
+                </center>
+				 <center>
+                    <p>
+                        <a href="/files/iccv2021sslad/sslad-report-3B.pdf" style="color: #990000">[Technical Report] </a>
+                    <p>
+				
+                </center>
+                 
+                <p></p>
+
+
+              
+                    <h2>Introduction</h2>
+
+                    <div style="font-size:14px">
+					<p>
+                       Autonomous driving technology has been significantly accelerated in recent years because of its great potential in reducing accidents, saving human lives and improving efficiency. In this competition, we focus on continul learning for object detection on four different scenes sequentially.
+					</p>   
+					<p>	SODA10M is a 2D object detection dataset, which contains images captured from four different scenarios. These scenarios are set as four tasks for continual learning. The continual learner is trained on each task sequentially. The tasks are: </p>
+					<ul>
+					<li>Task 1: Daytime, citystreet and clear weather. There are 4470 images in the training set.</li>
+					<li>Task 2: Daytime, highway and clear/overcast weather. There are 1329 images in the training set.</li>
+					<li>Tast 3: Night. There are 1479 images in the training set.</li>
+					<li>Tast 4: Daytime, rain. There are 524 images in the training set.</li>
+					</ul>
+		
+
+					  <center>
+						<img src="/img/competitions/sslad-track3.png" width="1000">
+					   </center>
+						
+                        <p>
+                          We have won the <strong>1st</strong> place out of <strong>53</strong> teams in this challenge using semi-supervised learning solution.
+                        </p>
+					
+					<h2>Solution Description</h2>
+					<center>
+						<img src="/img/competitions/sslad-track3b-framework.png" width="1000">
+					   </center>
+                 <p>In the SSLAD-Track 3B challenge on continual learning, we propose the method of COntinual Learning with Transformer (COLT). We find that transformers suffer less from catastrophic forgetting compared to convolutional neural network. The major principle of our method is to equip the transformer based feature extractor with old knowledge distillation and head expanding strategies to compete catastrophic forgetting. In this report, we first introduce the overall framework of continual learning for object detection. Then, we analyse the key elements’ effect on withstanding catastrophic forgetting in our solution. Our method achieves 70.78 mAP on the SSLAD-Track 3B challenge test set.</p>
+<p>
+For more details, please refer to our <a href="/files/iccv2021sslad/sslad-report-3B.pdf"
+                            target="_blank" style="color: #990000">Technical Report</a></p>
+
+				<hr/>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/all.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".footer").load("/common/footer.html");
+            $(".navigation").load("/common/navigation.html");
+        });
+    </script>
+
+</body>
+
+</html>
