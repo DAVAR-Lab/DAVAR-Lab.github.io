@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <title>DAVAR LAB</title>
+        <meta name="description" content="">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
+
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/small_logo.png">
+</head>
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
+    <div class="navigation"></div>
+
+    <div class="news top-container" style="font-size: 16px">
+        <div class="container-fluid">
+            <div class="post">
+                <header>
+                    <h1>A Strong Baseline for Semi-Supervised Incremental Few-Shot Learning</h1>
+                    <hr />
+                </header>
+		    
+		    
+		<img src="../img/publications/bmvc2021.png" />
+
+
+
+                <h2>Abstract</h2>
+               Few-shot learning (FSL) aims to learn models that generalize to novel classes with
+limited training samples. Recent works advance FSL towards a scenario where unlabeled examples are also available and propose semi-supervised FSL methods. Another
+line of methods also cares about the performance of base classes in addition to the novel
+ones and thus establishes the incremental FSL scenario. In this paper, we generalize the
+above two under a more realistic yet complex setting, named by Semi-Supervised Incremental Few-Shot Learning (S2I-FSL). To tackle the task, we propose a novel paradigm
+containing two parts: (1) a well-designed meta-training algorithm for mitigating ambiguity between base and novel classes caused by unreliable pseudo labels and (2) a model
+adaptation mechanism to learn discriminative features for novel classes while preserving base knowledge using few labeled and all the unlabeled data. Extensive experiments
+on standard FSL, semi-supervised FSL, incremental FSL, and the firstly built S2
+I-FSL
+benchmarks demonstrate the effectiveness of our proposed method.
+		    <a href="https://arxiv.org/abs/2110.11128" target="_blank" 
+                               style="color: #990000">[Paper]</a>
+  
+                <hr />
+
+                <h2>Highlights Contributions</h2>
+                	<p> A Semi-Supervised
+Incremental Few-Shot Learning (S2I-FSL) benchmark is proposed to generalize previous
+semi-supervised FSL and incremental FSL under a more realistic and challenging setting; 
+</p>
+			<p> 
+Technically, we propose an efficient meta-training paradigm and a model adaptation mechanism for the newly built task, which can be regarded as a baseline for future researches;</p>
+			<p> Extensive experiments on standard FSL, incremental FSL, semi-supervised FSL, and the S2I-FSL benchmark demonstrate the effectiveness of our proposed method </p>
+
+				<hr />
+
+
+
+                <h2>Recommended Citations</h2>
+				If you find our work is helpful to your research, please feel free to cite us:
+				<br>
+				<!-- BibTex here (Make sure that this is the last code block) -->
+        <pre>
+		@inproceedings{zhao2021strong, 
+			title={A Strong Baseline for Semi-Supervised Incremental Few-Shot Learning}, 
+			author={Zhao, Linglan and Guo, Dashan and Xu, Yunlu and Qiao, Liang and Cheng, Zhanzhan and Pu, Shiliang and Niu, Yi and Fang, Xiangzhong}, 
+			booktitle={BMVC},  
+			year={2021}, 
+		}
+        
+        </pre>
+
+		<br><br>
+				
+
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/all.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".footer").load("/common/footer.html");
+            $(".navigation").load("/common/navigation.html");
+        });
+    </script>
+</body>
+</html>
