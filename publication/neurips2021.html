@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <title>DAVAR LAB</title>
+        <meta name="description" content="">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
+
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/small_logo.png">
+</head>
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
+    <div class="navigation"></div>
+
+    <div class="news top-container" style="font-size: 16px">
+        <div class="container-fluid">
+            <div class="post">
+                <header>
+                    <h1>STEP : Out-of-Distribution Detection in the Presence of Limited In-distribution Labeled Data</h1>
+                    <hr />
+					<h3> (School-enterprise cooperation paper) </h3>
+                </header>
+		    
+		    
+		<img src="../img/publications/neurips2021.png" />
+
+
+
+                <h2>Abstract</h2>
+Existing semi-supervised learning (SSL) studies typically assume that unlabeled
+and test data are drawn from the same distribution as labeled data. However, in
+many real-world applications, it is desirable to have SSL algorithms that not only
+classify the samples drawn from the same distribution of labeled data but also
+detect out-of-distribution (OOD) samples drawn from an unknown distribution.
+In this paper, we study a setting called semi-supervised OOD detection. Two
+main challenges compared with previous OOD detection settings are i) the lack
+of labeled data and in-distribution data; ii) OOD samples could be unseen during
+training. Efforts on this direction remain limited. In this paper, we present an
+approach STEP significantly improving OOD detection performance by introducing
+a new technique: Structure-Keep Unzipping. It learns a new representation space in
+which OOD samples could be separated well. An efficient optimization algorithm
+is derived to solve the objective. Comprehensive experiments across various OOD
+detection benchmarks clearly show that our STEP approach outperforms other
+methods by a large margin and achieves remarkable detection performance on
+several benchmarks.
+.
+		    
+<a href="https://proceedings.neurips.cc/paper/2021/file/f4334c131c781e2a6f0a5e34814c8147-Paper.pdf" target="_blank" 
+                               style="color: #990000">[Paper]</a>
+  
+                <hr />
+
+         <h2>Highlights Contributions</h2>
+                	<p> ❃ We propose a practical setting for OOD detection, called semi-supervised OOD detection. </p>
+			<p> ❃ To alleviate the problem of Mahalanobis distance that the necessary covariance matrix Σˆ
+is hard to be estimated with limited ID samples, we present a new distance calculated in a
+detection-specific space as OOD confidence scores.</p>
+			<p> ❃ We evaluate our approach with comprehensive experiments across various OOD detection
+benchmarks. Our proposal outperforms previous methods by a large margin and achieves
+remarkable detection performance on several benchmarks.</p>
+				<hr />
+
+
+                <h2>Recommended Citations</h2>
+				If you find our work is helpful to your research, please feel free to cite us:
+				<br>
+				<!-- BibTex here (Make sure that this is the last code block) -->
+        <pre>
+		@inproceedings{jiang2021steps,
+		  author    = {Zhi Zhou and 
+		               Lan Zhe Guo and
+					   Zhanzhan Cheng and
+                       Yu-Feng Li1
+                       Shiliang Pu
+					   },
+		  title     = {STEP : Out-of-Distribution Detection in the Presence of Limited In-distribution Labeled Data},
+		  booktitle = {NeurIPS},
+		  year      = {2021},
+		}
+        </pre>
+
+		<br><br>
+				
+
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/all.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".footer").load("/common/footer.html");
+            $(".navigation").load("/common/navigation.html");
+        });
+    </script>
+</body>
+</html>
