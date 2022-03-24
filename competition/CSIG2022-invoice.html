@@ -8,12 +8,16 @@
 	.box{
 		margin: 0 auto;
 		width: 1200px;
+		margin-top: 50px;
 	}
 	.fl_l{
 		width: 15%;
 		float: left;
 		border: 1px solid #f4f4f4;
 		background: #fff;
+		padding-left: 0px;
+		position:fixed;
+		top: 80px;
 	}
 	.fl_l li a{
 		border-bottom: 1px solid #eee;
@@ -29,8 +33,8 @@
 	}
 	.fl_r{
 		float: right;
-		width: 75%;
-		margin-right:10px
+		width: 80%;
+	
 	}
 
 	
@@ -200,11 +204,11 @@
 		var _line=parseInt($(window).height()/3);
 		$(window).scroll(function(){
 			//滚动730px，左侧导航固定定位
-			if ($(window).scrollTop()>730) {
-				$('.fl_l').css({'position':'fixed','top':10})
-			}else{
-				$('.fl_l').css({'position':'','top':''})
-			};
+			//if ($(window).scrollTop()>730) {
+		     //		$('.fl_l').css({'position':'fixed','top':80})
+			//}else{
+			//	$('.fl_l').css({'position':'','top':''})
+			//};
 			$('.fl_l li').eq(0).addClass('active');
 			//滚动到标杆位置,左侧导航加active
 			$('.fl_r li').each(function(){
