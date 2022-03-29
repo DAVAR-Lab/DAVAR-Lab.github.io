@@ -16,8 +16,7 @@
 		border: 1px solid #f4f4f4;
 		background: #fff;
 		padding-left: 0px;
-		position:fixed;
-		top: 80px;
+		position:210px;
 	}
 	.fl_l li a{
 		border-bottom: 1px solid #eee;
@@ -203,12 +202,12 @@
 		//设置标杆
 		var _line=parseInt($(window).height()/3);
 		$(window).scroll(function(){
-			//滚动730px，左侧导航固定定位
-			//if ($(window).scrollTop()>730) {
-		     //		$('.fl_l').css({'position':'fixed','top':80})
-			//}else{
-			//	$('.fl_l').css({'position':'','top':''})
-			//};
+			//滚动130px，左侧导航固定定位
+			if ($(window).scrollTop()>130) {
+		    		$('.fl_l').css({'position':'fixed','top':80})
+			}else{
+				$('.fl_l').css({'position':'','top':''})
+			};
 			$('.fl_l li').eq(0).addClass('active');
 			//滚动到标杆位置,左侧导航加active
 			$('.fl_r li').each(function(){
