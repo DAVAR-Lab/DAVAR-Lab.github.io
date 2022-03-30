@@ -37,11 +37,18 @@
 	}
 	
 	.fl_r li{
-		margin-bottom: 25px;
+		margin-bottom: 50px;
 	}
 	
 	.fl_r p {
 		font-size: 18px;
+	}
+	
+
+	
+	.fl_r img{
+		max-width: 100%;
+		max-height: 250px;
 	}
 
 	
@@ -88,7 +95,9 @@
 					<li class="active"><a href="##">Introduction</a></li>
 					<li><a href="##">Schedule</a></li>
 					<li><a href="##">Dataset</a></li>
+					<li><a href="##">Submission</a></li>
 					<li><a href="##">Evaluation</a></li>
+					<li><a href="##">Copyright</a></li>
 					<li><a href="##">Organizers</a></li>
 					
 				</ul>
@@ -97,7 +106,7 @@
 					 <h1> Introduction </h1>
 							<p style="text-align:justify; text-justify:inter-ideograph;"> 
 									Invoice recognition is a very important part of financial office automation, which aims to automatically extract predetermined content (such as date and amount) from scanned invoices. Due to the problems of various layouts, blurred handwriting, and misplaced text in scanned tickets, it is a very challenging task to accurately locate, identify and structure the fields of the invoices.
-
+                                    <br><br>
 									This time we released the invoice analysis and identification challenge. This competition is related to cutting-edge technologies such as computer vision, natural language processing, and multimodal fusion, and has great technical value and practical social application value. We sincerely invite the vast number of algorithm experts and technology enthusiasts to participate, to design better invoice recognition algorithms, and to further promote the implementation of OCR in real production scenarios.
 							</p>
 					</li>
@@ -106,80 +115,235 @@
 						<h3> Preliminary Contest: </h3>
 						
                         <p style="text-align:justify; text-justify:inter-ideograph;"> 
-							- 11th April 2022: Registration Open For All Participants
+							- <strong>11th April 2022 </strong>: Registration Open For All Participants
 							<br>
-							- 18th April 2022: Dataset Open For Download
+							- <strong>18th April 2022</strong>: Dataset Open For Download
 							<br>
-							- 18th April 2022 to 23th June 2022: Preliminary Contest A Evaluation
+							- <strong>18th April 2022</strong> to <strong>23th June 2022</strong>: Preliminary Contest A Evaluation
 							<br>
-							- 24th June 2022 to 26th June 2022:** Preliminary Contest B Evaluation
+							- <strong>24th June 2022</strong> to <strong>26th June 2022</strong>: Preliminary Contest B Evaluation
 						</p>
 						<h3> Final Contest: </h3>
 						<p style="text-align:justify; text-justify:inter-ideograph;">
-							- 27th June 2022 to 7th July 2022: Winner Scheme Verification (Review the code and anti-cheating situation, and reproduce the results)
+							- <strong>27th June 2022</strong> to <strong>7th July 2022</strong>: Winner Scheme Verification (Review the code and anti-cheating situation, and reproduce the results)
 							<br>
-							- **8th July 2022:** Final defense, announcement of winning results
+							- <strong>8th July 2022</strong>: Final defense, announcement of winning results
 						</p>
 					</li>
 					<li style="height: auto;">
-						<h3> Dataset </h3>
+						<h1> Dataset </h1>
                         <p style="text-align:justify; text-justify:inter-ideograph;"> 
-							Videos carry rich information with both visual (including text) and audio modality.
-							Video understanding has been a popular research topic in both academia and industry.
-							The development of methods to fuse the multi-modal information is also a
-							challenging and meaningful exploration.
-							<br>
-							In this challenge, we focus on extracting subtitles from videos. Subtitles are the text
-							derived from either a transcript or screenplay of the dialogue or commentary in
-							videos. Subtitles may be the most important text information for video data, as they
-							contain information of what the people said. They are widely used in
-							recommendation, retrieval and video understanding systems.
-							<br>
-							Subtitles refer to the text displayed in the video after converting the audio into
-							accurate text, however the text in the video is not always belong to subtitles. For
-							example, the text in the blue boxes in the figure is not a subtitle, but the text in the red
-							box that converts audio into text is a subtitle.
+							The dataset contains six types of invoices for algorithm verification. They are Taxi Invoice, Train Invoice, Passenger Invoice, Toll Invoice, Air Itinerary Invoice and Quota Invoice. All images have been were desensitized. Some visualization examples are shown as follows.
+						
+							<table width= "100%" border="1" align="center">
+								<tr> 
+								
+								<td align="center" width="33%"> <img src="/img/invoice_contest/air.jpg"/>  </td>
+								<td align="center" width="33%"> <img src="/img/invoice_contest/general.jpg"/> </td>
+								<td align="center" width="33%"> <img src="/img/invoice_contest/taxi.jpg"/> </td>
+								</tr> 
+							
+								<tr>
+								<td align="center" width="33%"> Air Ticket</td>
+								<td align="center" width="33%"> General Quota Invoice</td>
+								<td align="center" width="33%"> Taxi Invoice</td>
+								</tr>
+								
+								<tr>
+								<td  align="center"  width="33%"> <img src="/img/invoice_contest/pass.jpg"/> </td>
+								<td align="center" width="33%"> <img src="/img/invoice_contest/toll.jpg"/> </td>
+								<td align="center" width="33%"> <img src="/img/invoice_contest/train.jpg"/> </td>
+								</tr>
+								
+								</tr>
+								<td align="center" width="33%"> Passenger Transport Invoice</td>
+								<td align="center" width="33%"> Toll Invoice</td>
+								<td align="center" width="33%"> Train Ticket</td>
+								</tr>
+								
+							</table>
+							
+						</p>
+						
+						
+						<h3> Annoations </h3>
+						
+						 <p> We provide two types annotation files for the training data, <strong>ocr.json </strong> and <strong> gt.json </strong>: </p>
+						
+						<h5> ocr.json </h5>
+						  <p style="text-align:justify; text-justify:inter-ideograph;"> 
+						 This file contains the annotations for each text instance's location and content, defined as follows:
+						  </p>
+						<p>
+						  <pre>
+"abf3b61f-cefe-374e-2ace-ac1fbdf3f3af_1.jpg": {
+	"height": 891,
+	"width": 1245,
+	"content_ann": {
+		"texts": [
+			"112002070106", "12921503", "壹佰元整", "###", ...
+		]
+		"bboxes": [
+			[ 453, 338, 830, 328, 832, 383, 454, 393 ],
+			[ 446, 411, 739, 406, 741, 466, 448, 473 ],
+			[ 462, 603, 809, 595, 812, 683, 464, 693 ],
+			[ 428, 347, 883, 364, 882, 709, 419, 710 ],
+			...
+		],
+		"cares": [
+			1, 1, 1, 0, ...
+		]
+	},
+},
+						</pre>
+			 where, 
+	<br>
+  <strong>- texts</strong>: text content annotations for each text instance,
+	<br>
+  <strong>-  bboxes</strong>: location for each text instance,
+    <br>
+  <strong>- cares</strong>: whether this text instance can be ignores during training or evaluation.			
+						
+						
+						
+						</p>
+						
+						<h5> gt.json </h5>
+						 <p style="text-align:justify; text-justify:inter-ideograph;"> 
+						 This file contains the entity annotation groundtruth. An example corresponding to the above ocr.json is as follows:
+						  <pre>
+"abf3b61f-cefe-374e-2ace-ac1fbdf3f3af_1.jpg": {
+	"发票代码":112002070106,
+	"发票号码":12921503,
+	"金额":"壹佰元整",
+}
+						</pre>
+						
+
+						
+						 </p>
+					
+					</li>
+					
+					
+					
+					
+					
+					<li style="height: auto;">
+						<h1> Submission </h1>
+                        <p style="text-align:justify; text-justify:inter-ideograph;"> 
+							To submit your results to the leaderboard, you must construct a single submission <strong>json</strong> file in <strong> utf-8</strong> encoding containing the model's results on the validation or test set.
+							<br><br>
+							The keys in the submission json denote the file names and the values are the models' predicted results for evaluation. The required items for different types of invoice are different, as shown below: 
+							
+							
+							<table width= "100%" border="1" align="center">
+								<tr> 
+								
+								<td align="left" width="33%">
+					  <pre>
+"file_name.jpg": {
+	"发票代码":112002070106,
+	"发票号码":12921503,
+	"金额":"壹佰元整",
+}
+						</pre>
+								</td>
+								<td align="left" width="33%">
+					  <pre>
+"file_name.jpg": {
+	"发票代码":112002070106,
+	"发票号码":12921503,
+	"金额":"壹佰元整",
+}
+						</pre>
+								
+								</td>
+								<td align="left" width="33%"> 
+					  <pre>
+"file_name.jpg": {
+	"发票代码":112002070106,
+	"发票号码":12921503,
+	"金额":"壹佰元整",
+}
+						</pre>
+								</td>
+								</tr> 
+							
+								<tr>
+								<td align="center" width="33%"> Air Ticket</td>
+								<td align="center" width="33%"> General Quota Invoice</td>
+								<td align="center" width="33%"> Taxi Invoice</td>
+								</tr>
+								
+																<tr> 
+								
+								<td align="left" width="33%">
+					  <pre>
+"file_name.jpg": {
+	"发票代码":112002070106,
+	"发票号码":12921503,
+	"金额":"壹佰元整",
+}
+						</pre>
+								</td>
+								<td align="left" width="33%">
+					  <pre>
+"file_name.jpg": {
+	"发票代码":112002070106,
+	"发票号码":12921503,
+	"金额":"壹佰元整",
+}
+						</pre>
+								
+								</td>
+								<td align="left" width="33%"> 
+					  <pre>
+"file_name.jpg": {
+	"发票代码":112002070106,
+	"发票号码":12921503,
+	"金额":"壹佰元整",
+}
+						</pre>
+								</td>
+								</tr>
+								<td align="center" width="33%"> Passenger Transport Invoice</td>
+								<td align="center" width="33%"> Toll Invoice</td>
+								<td align="center" width="33%"> Train Ticket</td>
+								</tr>
+								
+							</table>
+								
+						A sample submission file can be downloaded <a href="#"> here.</a> 	
+						</p>
+					</li>
+					
+					<li style="height: auto;">
+						<h1> Evaluation </h1>
+                        <p style="text-align:justify; text-justify:inter-ideograph;"> 
+							For each test invoice image, the extracted text is compared to the ground truth. An extract text is marked as correct if both submitted content and category of the extracted text matches the groundtruth; Otherwise, marked as incorrect. The precision is computed over all the extracted texts of all the test invoice images. F1 score is computed based on precision and recall. F1 score will be used for ranking.
 						</p>
 					</li>
 					<li style="height: auto;">
-						<h3> Evaluation </h3>
-                        <p style="text-align:justify; text-justify:inter-ideograph;"> 
-							Videos carry rich information with both visual (including text) and audio modality.
-							Video understanding has been a popular research topic in both academia and industry.
-							The development of methods to fuse the multi-modal information is also a
-							challenging and meaningful exploration.
-							<br>
-							In this challenge, we focus on extracting subtitles from videos. Subtitles are the text
-							derived from either a transcript or screenplay of the dialogue or commentary in
-							videos. Subtitles may be the most important text information for video data, as they
-							contain information of what the people said. They are widely used in
-							recommendation, retrieval and video understanding systems.
-							<br>
-							Subtitles refer to the text displayed in the video after converting the audio into
-							accurate text, however the text in the video is not always belong to subtitles. For
-							example, the text in the blue boxes in the figure is not a subtitle, but the text in the red
-							box that converts audio into text is a subtitle.
+						<h1> Copyright </h1>
+                        <p style="text-align:justify; text-justify:inter-ideograph;">
+							
+							The dataset's copyright belongs to Davar-Lab of Hikvision Research Insititute, and all rights reserved. The dataset is available for downloading only for non-commercial purposes. Please <strong> DO NOT re-distribute </strong> the data.
+							
+							<br><br>
+							For any question, please contact with <a href=mailto:qiaoliang6@hikvision.com> qiaoliang6@hikvision.com </a>.
+							
 						</p>
 					</li>
 					<li style="height: auto;">
-						<h3> Organizers </h3>
-                        <p style="text-align:justify; text-justify:inter-ideograph;"> 
-							Videos carry rich information with both visual (including text) and audio modality.
-							Video understanding has been a popular research topic in both academia and industry.
-							The development of methods to fuse the multi-modal information is also a
-							challenging and meaningful exploration.
-							<br>
-							In this challenge, we focus on extracting subtitles from videos. Subtitles are the text
-							derived from either a transcript or screenplay of the dialogue or commentary in
-							videos. Subtitles may be the most important text information for video data, as they
-							contain information of what the people said. They are widely used in
-							recommendation, retrieval and video understanding systems.
-							<br>
-							Subtitles refer to the text displayed in the video after converting the audio into
-							accurate text, however the text in the video is not always belong to subtitles. For
-							example, the text in the blue boxes in the figure is not a subtitle, but the text in the red
-							box that converts audio into text is a subtitle.
-						</p>
+						<h1> Organizers </h1>
+                        <div float="left">
+						
+						 <img width="140px" src="/img/invoice_contest/csig.png" />  &nbsp
+						 <img width="300px" src="/img/invoice_contest/hikvision.png" /> &nbsp
+						<img width="150px" src="/img/invoice_contest/fudan.png" />  &nbsp &nbsp
+						<img width="120px"  src="/img/invoice_contest/hainan.png" />  
+						</div>
 					</li>
 				</ul>
 				<div style="clear: both;"></div>
