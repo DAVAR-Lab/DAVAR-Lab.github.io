@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style type="text/css">
+	ul{
+		list-style: none;
+	}
+	.box{
+		margin: 0 auto;
+		width: 1200px;
+		margin-top: 50px;
+	}
+	.fl_l{
+		width: 200px;
+		float: left;
+		border: 1px solid #f4f4f4;
+		background: #fff;
+		padding-left: 0px;
+		position:210px;
+	}
+	.fl_l li a{
+		border-bottom: 1px solid #eee;
+		text-align: center;
+		display: block;
+		color: #333;
+		font-size: 20px;
+		line-height: 60px;
+	}
+	.fl_l li.active a{
+		background: #f60;
+		color: #fff;
+	}
+	.fl_r{
+		float: right;
+		width: 80%;
+	
+	}
+	
+	.fl_r li{
+		margin-bottom: 50px;
+	}
+	
+	.fl_r p {
+		font-size: 18px;
+	}
+	
+
+	
+	.fl_r img{
+		max-width: 100%;
+		max-height: 250px;
+	}
+
+	
+
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+
+    <title>CSIG 2022 Competition on Invoice Recognition and Analysis</title>
+    <meta name="description" content="">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet'
+        type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/small_logo.png">
+</head>
+
+
+
+
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
+    <div class="navigation"></div>
+
+    <div class="news top-container">
+        <div class="container-fluid">
+            <div id="primarycontent">
+                <center>
+                    <h2>CSIG 2022 Competition on Invoice Recognition and Analysis </h2>
+					<p> 语言: &nbsp <strong> <a href="/competition/CSIG2022-invoice.html">English </a> | 中文</strong> </p>
+                </center>
+              
+			<div class="box">
+				<ul class="fl_l">
+					<li class="active"><a href="##">介绍</a></li>
+					<li><a href="##">日程安排</a></li>
+					<li><a href="##">奖项设置</a></li>
+					<li><a href="##">数据集</a></li>
+					<li><a href="##">结果提交</a></li>
+					<li><a href="##">评测方法</a></li>
+					<li><a href="##">条款与协议</a></li>
+					<li><a href="##">组织者</a></li>
+					
+				</ul>
+				<ul class="fl_r">
+					<li style="height: auto;">
+					 <h1> 介绍 </h1>
+							<p style="text-align:justify; text-justify:inter-ideograph;"> 
+									发票识别是财务办公自动化中非常重要的一部分，其目的是从扫描的发票中自动提取预定的内容(如日期、金额)。 由于扫描的发票存在布局多样、字迹模糊、文本错位等问题，要对发票的字段进行准确的定位、识别和信息结构化是一项非常具有挑战性的任务。  
+                                    <br><br>
+									这次我们发布了发票分析和识别挑战。 本次大赛涉及计算机视觉、自然语言处理、多模态融合等前沿技术，具有较大的技术价值和实际社会应用价值。 我们真诚邀请广大算法专家和技术爱好者参与，设计更好的发票识别算法，进一步推动OCR在实际生产场景中的实施。  
+									<br><br>
+									我们使用<a href="https://codalab.lisn.upsaclay.fr/competitions/3823"> CodaLab </a>作为竞赛平台。 参赛者需进行报名才能参加比赛。 请按照说明:1)在CodaLab中注册队伍并报名。 2)加入CodaLab进行发票分析和识别挑战。 只需点击“参与”标签注册。 具体的参赛规则请参见“条款与协议”。
+							</p>
+					</li>
+					<li style="height: auto;">
+						<h1> 日程安排 </h1>
+						<h3> 初赛: </h3>
+						
+                        <p style="text-align:justify; text-justify:inter-ideograph;"> 
+							- <strong>2022/4/11 </strong>: 比赛启动报名
+							<br>
+							- <strong>2022/4/18</strong>: 训练集和A榜测试集开发下载
+							<br>
+							- <strong>2022/4/18</strong> 至 <strong>2022/6/23 23:59 UTC+8</strong>: A榜提交成绩
+							<br>
+							- <strong>2022/6/24 12:00 UTC+8</strong> 至 <strong>2022/6/26 12:00 UTC+8</strong>: B榜测试集开放下载，B榜提交成绩
+						</p>
+						
+						
+						<h3> Final Contest: </h3>
+						<p style="text-align:justify; text-justify:inter-ideograph;">
+							- <strong>2022/6/27</strong> 至 <strong>2022/7/7</strong>: 成绩复核验证 (检查代码和反作弊情况，并复现结果)
+							<br>
+							- <strong>2022/7/8</strong>: 决赛（线上答辩），并公布最终获奖团队结果
+						</p>
+						
+						
+						
+					</li>
+					
+					<li style="height: auto;">
+						<h1> 奖项设置 </h1>
+				
+						<p style="text-align:justify; text-justify:inter-ideograph;">
+							最终的结果将会综合考量B榜测试集结果与线上答辩成绩。决出: <br>
+							
+							- 一等奖1名 <strong>￥20000</strong> 
+							<br>
+							- 二等奖2名 <strong>￥10000</strong> 
+							<br>
+							- 三等奖2名 <strong>￥5000</strong> 
+							<br>
+							
+							以上金额均为税前金额。
+						</p>
+						
+						
+						
+					</li>
+					
+					<li style="height: auto;">
+						<h1> 数据集 </h1>
+                        <p style="text-align:justify; text-justify:inter-ideograph;"> 
+							数据集包含用于算法验证的六种发票类型。 它们分别是出租车发票、火车票、客运发票、通行费发票、航空行程单和定额发票。 所有图像都已脱敏。 一些可视化示例如下所示。  
+						
+							<table width= "100%" border="1" align="center">
+								<tr> 
+								
+								<td align="center" width="33%"> <img src="/img/invoice_contest/air.jpg"/>  </td>
+								<td align="center" width="33%"> <img src="/img/invoice_contest/general.jpg"/> </td>
+								<td align="center" width="33%"> <img src="/img/invoice_contest/taxi.jpg"/> </td>
+								</tr> 
+							
+								<tr>
+								<td align="center" width="33%"> 飞机行程单</td>
+								<td align="center" width="33%"> 通用定额发票</td>
+								<td align="center" width="33%"> 出租车票</td>
+								</tr>
+								
+								<tr>
+								<td  align="center"  width="33%"> <img src="/img/invoice_contest/pass.jpg"/> </td>
+								<td align="center" width="33%"> <img src="/img/invoice_contest/toll.jpg"/> </td>
+								<td align="center" width="33%"> <img src="/img/invoice_contest/train.jpg"/> </td>
+								</tr>
+								
+								</tr>
+								<td align="center" width="33%"> 客运发票</td>
+								<td align="center" width="33%"> 通行费发票</td>
+								<td align="center" width="33%"> 火车票</td>
+								</tr>
+								
+							</table>
+							
+						</p>
+						
+						
+						<h3> 标注 </h3>
+						
+						 <p>在训练集中我们提供两种标注文件, <strong>ocr.json </strong> 和 <strong> gt.json </strong>: </p>
+						
+						<p> <strong> ocr.json </strong> </p>
+						  <p style="text-align:justify; text-justify:inter-ideograph;"> 
+						 这个文件中包含了使用OCR引擎获得的图片中的文字位置和文字内容（其中关注字段的文字识别内容经过了人工清洗）:
+						  </p>
+						  
+						<p>
+						<img width="600px" href="/img/invoice_contest/abf3b61f-cefe-374e-2ace-ac1fbdf3f3af_1.jpg"/> 
+						
+						  <pre>
+"abf3b61f-cefe-374e-2ace-ac1fbdf3f3af_1.jpg": {
+	"height": 891,
+	"width": 1245,
+	"content_ann": {
+		"texts": [
+			"112002070106", "12921503", "壹佰元整", "###", ...
+		]
+		"bboxes": [
+			[ 453, 338, 830, 328, 832, 383, 454, 393 ],
+			[ 446, 411, 739, 406, 741, 466, 448, 473 ],
+			[ 462, 603, 809, 595, 812, 683, 464, 693 ],
+			[ 428, 347, 883, 364, 882, 709, 419, 710 ],
+			...
+		],
+		"cares": [
+			1, 1, 1, 0, ...
+		]
+	},
+},
+						</pre>
+			 其中, 
+	<br>
+  <strong>- texts</strong>: 每个文字实体的文字内容,
+	<br>
+  <strong>-  bboxes</strong>: 每个文字实体的坐标,
+    <br>
+  <strong>- cares</strong>: 是否是关注的字段。			
+						
+						
+						
+						</p>
+						
+						<p> <strong> gt.json </strong> </p>
+						 <p style="text-align:justify; text-justify:inter-ideograph;"> 
+						 这个文件包含了最终发票的结构化信息，一个具体的例子如下:
+						  <pre>
+"abf3b61f-cefe-374e-2ace-ac1fbdf3f3af_1.jpg": {
+	"发票代码":112002070106,
+	"发票号码":12921503,
+	"金额":"壹佰元整",
+}
+						</pre>
+						
+
+						
+						 </p>
+					
+					</li>
+					
+					
+					
+					
+					
+					<li style="height: auto;">
+						<h1> 结果提交 </h1>
+                        <p style="text-align:justify; text-justify:inter-ideograph;"> 
+							要将结果提交到排行榜，您必须提交一个***.zip文件，该文件包含一个<strong>json</strong>文件，该文件以<strong> utf-8</strong>编码，包含了模型在验证集或测试集上的结果。  
+							<br > <br>  
+							提交json中的键表示文件名，值是模型的预测结果。 不同类型的发票所需要的字段不同，如下所示:  
+							
+							
+							<table width= "100%" border="1" align="center">
+								<tr> 
+								
+								<td align="left" width="33%">
+					  <pre>
+"file_name.jpg": {
+	"日期": "",
+	"金额": "",
+	"始发站":"",
+	"到达站": "",
+	"保险费": ""
+}
+						</pre>
+								</td>
+								<td align="left" width="33%">
+					  <pre>
+"file_name.jpg": {
+	"发票代码": "",
+	"发票号码":"",
+	"金额":""
+}
+						</pre>
+								
+								</td>
+								<td align="left" width="33%"> 
+					  <pre>
+"file_name.jpg": {
+	"发票代码":"",
+	"发票号码":"",
+	"金额":"",
+	"日期":""
+}
+						</pre>
+								</td>
+								</tr> 
+							
+								<tr>
+								<td align="center" width="33%"> 飞机行程单</td>
+								<td align="center" width="33%"> 通用定额发票</td>
+								<td align="center" width="33%"> 出租车发票</td>
+								</tr>
+								
+																<tr> 
+								
+								<td align="left" width="33%">
+					  <pre>
+"file_name.jpg": {
+	"日期":"",
+	"始发站":"",
+	"到达站":"",
+	"金额":""
+}
+						</pre>
+								</td>
+								<td align="left" width="33%">
+					  <pre>
+"file_name.jpg": {
+	"发票代码":"",
+	"发票号码":"",
+	"金额":"",
+	"入口":"",
+	"出口":""
+}
+						</pre>
+								
+								</td>
+								<td align="left" width="33%"> 
+					  <pre>
+"file_name.jpg": {
+	"日期":"",
+	"金额":"",
+	"始发站":"",
+	"到达站":"",
+	"座位类型":""
+}
+						</pre>
+								</td>
+								</tr>
+								<td align="center" width="33%"> 客运发票</td>
+								<td align="center" width="33%"> 通行费发票</td>
+								<td align="center" width="33%"> 火车票</td>
+								</tr>
+								
+							</table>
+								
+						 一个示例的提交文件可以在这里 <a href="/files/csig2022_invoice/pred.zip"> 下载.</a> 	
+						</p>
+					</li>
+					
+					<li style="height: auto;">
+						<h1> 评测方法 </h1>
+                        <p style="text-align:justify; text-justify:inter-ideograph;"> 
+							对于每个测试发票图像，提取的文本将与地面真实结果进行比较。 如果所文本的提交内容和类别都与真值相符，则该字段被标记为正确; 否则，该字段标记为不正确。 最终结果讲对所有测试发票图像的所有提取字段计算准确率。 F1评分是基于precision和recall计算的。 F1分数将用于排名。  
+						</p>
+						<img src="/img/invoice_contest/evaluation.png" />  
+					</li>
+					<li style="height: auto;">
+						<h1> 条款与协议</h1>
+                        
+						
+						<h3> 参赛组队规则 </h3>
+						     <p style="text-align:justify; text-justify:inter-ideograph;">
+								1、参赛人群：大赛面向全球征集参赛团队，不限年龄、国籍，高校、科研院所、企业从业人员等均可登录官网报名参赛。
+								<br>							2、报名组队要求：所有参赛选手应在截止日期前自行完成组队，并以团队身份提交各阶段的结果，一个人只允许参加一支队伍。
+							    <br>	3、成绩提交要求：由于CodaLab无法提交个人实名验证，对于A榜提交的结果不做账户或提交次数的限制。参与B榜排行的队伍需要向比赛组织方提供团队成员信息与团队账户，一个团队仅允许通过唯一账户进行结果提交，B榜期间一支队伍最多有10次提交成绩的机会。大赛组委会承诺其中涉及个人隐私的内容予以保密。
+							    <br>		4、回避原则：大赛出题的人员及所在部门人员禁止参与所出具的赛题（可参与其他赛题），直接参与大赛策划、组织、技术服务的工作人员等相关人士禁止参赛，禁止委托他人参赛或违规指导参赛团队。
+							</p>
+					<h3> 作品提交要求 </h3>
+						     <p style="text-align:justify; text-justify:inter-ideograph;">
+								1、作品原创：参赛作品必须保证原创性，不违反任何中华人民共和国有关法律法规，不侵犯任何第三方知识产权或其他权利，一经发现或经权利人提出并查证，大赛组委会将取消其比赛资格和成绩并进行严肃处理。
+								<br>
+								2、作品知识产权：参赛作品（包含但不限于算法、模型、方案等）知识产权归出题单位、参赛者、比赛主办方平台三方共享，大赛组织单位拥有对参赛作品组织投资对接和产品孵化服务的优先权利；大赛组织方及竞赛平台均有权利将参赛作品、比赛信息、参赛团队信息用于宣传品、相关出版物、制定及授权媒体发布、官方网站浏览及下载、展览（含巡展）等活动项目；
+								<br>
+								3、竞赛数据说明：组委会授权参赛人员使用提供的数据进行指定比赛的模型训练工作，本次比赛数据集的版权归海康威视研究院Davar实验室所有，数据集该数据集仅可以通过官方途径下载并在非商业场景下使用，请 <strong> 不要 </strong> 在其他途径传播。
+								<br>
+								4、作品合规性：参赛团队需保证提交作品的合规性，若出现下列或其他重大违规的情况，经大赛组委会合议后，取消参赛团队的参赛资格和成绩，获奖团队名单依次顺延。重大违规情况如下：
+								  a.使用小号、串通、剽窃他人代码等涉嫌违规、作弊行为；
+								  b.外部数据仅允许使用公开的开源数据集，不允许使用额外私有数据；
+								  c.团队提交的材料内容不完整，或提交任何虚假信息；
+								  d.参赛团队无法就作品疑议进行足够信服的解释说明；
+								  e.提交的作品包含不健康、淫秽、色情或诽谤任何第三方的内容等其他重大违规行为。
+							</p>
+							
+						<h3> 成绩验证与复核 </h3>
+						     <p style="text-align:justify; text-justify:inter-ideograph;">
+								为保证比赛公平性，B榜开放期间，参与者需要按照主办方要求，通过邮件的方式提供唯一的团队账户信息与队伍人员信息，未经过验证的账户将不纳入最终成绩的排名。
+								<br>
+								B榜截止后，排名前10名的团队需要参与到成绩的复核中，复核中参赛队伍需要提供作品源代码和说明文档以保证成绩的真实有效。
+								<br>
+								复核有效的队伍将进入最终的决赛答辩中，决赛答辩中将综合考虑B榜成绩（70%）与算法创新性、有效性、合理性等考量指标（30%）得到最终的排名。
+								
+						
+							</p>
+							
+							<p style="text-align:justify; text-justify:inter-ideograph;">
+							
+						
+							
+							如有任何疑问，请联系<a href=mailto:qiaoliang6@hikvision.com> qiaoliang6@hikvision.com </a>。  
+							
+							
+							
+							
+						</p>
+					</li>
+					<li style="height: auto;">
+						<h1> 组织者 </h1>
+						 <p style="text-align:justify; text-justify:inter-ideograph;">
+						<strong> 海康威视研究院</strong> <br>
+						<strong>复旦计算机科学与技术学院</strong> <br>
+						<strong> 海南大学计算机科学与技术学院</strong> <br>
+						</p>
+                        <div float="left">
+						 <!-- <img width="140px" src="/img/invoice_contest/csig.png" />  &nbsp -->
+						 <img width="300px" src="/img/invoice_contest/hikvision.png" /> &nbsp
+						<img width="150px" src="/img/invoice_contest/fudan.png" />  &nbsp &nbsp
+						<img width="120px"  src="/img/invoice_contest/hainan.png" />  
+						</div>
+					</li>
+				</ul>
+				<div style="clear: both;"></div>
+			</div>
+
+                  
+			</div>
+		</div>
+    </div>
+    <div class="footer"></div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/all.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".footer").load("/common/footer.html");
+            $(".navigation").load("/common/navigation.html");
+        });
+		$(function(){
+		//设置标杆
+		var _line=parseInt($(window).height()/3);
+		$(window).scroll(function(){
+			//滚动130px，左侧导航固定定位
+			if ($(window).scrollTop()>130) {
+		    		$('.fl_l').css({'position':'fixed','top':80})
+			}else{
+				$('.fl_l').css({'position':'','top':''})
+			};
+			$('.fl_l li').eq(0).addClass('active');
+			//滚动到标杆位置,左侧导航加active
+			$('.fl_r li').each(function(){
+				var _target=parseInt($(this).offset().top-$(window).scrollTop()-_line);
+				var _i=$(this).index();
+				if (_target<=0) {
+					$('.fl_l li').removeClass('active');
+					$('.fl_l li').eq(_i).addClass('active');
+				}
+				//如果到达页面底部，给左侧导航最后一个加active
+				else if($(document).height()==$(window).scrollTop()+$(window).height()){
+					$('.fl_l li').removeClass('active');
+					$('.fl_l li').eq($('.fl_r li').length-1).addClass('active');
+				}
+			});
+		});
+		$('.fl_l li').click(function(){
+			$(this).addClass('active').siblings().removeClass('active');
+			var _i=$(this).index();
+			 $('body, html').animate({scrollTop:$('.fl_r li').eq(_i).offset().top-_line},500);
+		});
+	});
+    </script>
+
+</body>
+
+</html>
