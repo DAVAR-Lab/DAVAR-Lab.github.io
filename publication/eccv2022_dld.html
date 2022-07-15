@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <title>DAVAR LAB</title>
+        <meta name="description" content="">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
+
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/small_logo.png">
+</head>
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
+    <div class="navigation"></div>
+
+    <div class="news top-container" style="font-size: 16px">
+        <div class="container-fluid">
+            <div class="post">
+                <header>
+                    <h1>PMAL: Open Set Recognition via Robust Prototype Mining
+</h1>
+                    <hr />
+                </header>
+		    
+		    
+		<img src="../img/publications/aaai2022_open.png" />
+
+
+
+                <h2>Abstract</h2>
+                Open Set Recognition (OSR) has been an emerging topic.
+Besides recognizing predefined classes, the system needs to
+reject the unknowns. Prototype learning is a potential manner to handle the problem, as its ability to improve intra-class
+compactness of representations is much needed in discrimination between the known and the unknowns. In this work,
+we propose a novel Prototype Mining And Learning (PMAL)
+framework. It has a prototype mining mechanism before the
+phase of optimizing embedding space, explicitly considering two crucial properties, namely high-quality and diversity
+of the prototype set. Concretely, a set of high-quality candidates are firstly extracted from training samples based on
+data uncertainty learning, avoiding the interference from unexpected noise. Considering the multifarious appearance of
+objects even in a single category, a diversity-based strategy
+for prototype set filtering is proposed. Accordingly, the embedding space can be better optimized to discriminate therein
+the predefined classes and between known and unknowns.
+Extensive experiments verify the two good characteristics
+(i.e., high-quality and diversity) embraced in prototype mining, and show the remarkable performance of the proposed
+framework compared to state-of-the-arts.
+
+		    <a href="https://arxiv.org/pdf/2203.08569.pdf" target="_blank" 
+                               style="color: #990000">[Paper]</a>
+  
+                <hr />
+
+                <h2>Highlights Contributions</h2>
+                	<p> ❃ Different from
+the common usage of implicitly learnable prototypes, we
+pay more attention on choosing prototypes with explicit criteria for OSR tasks. We point out the two important attributes of prototypes, namely the high-quality and diversity. </p>
+			<p> ❃ We design a OSR framework by prototype mining and learning.
+In the prototype mining phase, the above
+two key attributes are taken into consideration. In the embedding learning phase, with the chosen prototypes as fixed
+anchors for each class, a better embedding space is learned,
+without any sophisticated skills for convergence.</p>
+			<p> ❃ Extensive experiments on multiple OSR benchmarks show that
+our method is powerful to discriminate the known and unknowns, surpassing the state-of-the-art performance by a
+large margin, especially in complicated large-scale tasks.</p>
+
+				<hr />
+
+
+
+                <h2>Recommended Citations</h2>
+				If you find our work is helpful to your research, please feel free to cite us:
+				<br>
+				<!-- BibTex here (Make sure that this is the last code block) -->
+        <pre>
+@inproceedings{jing@aaai2022,
+  author    = {Jing Lu and
+               Yunlu Xu and
+			   Hao Li and
+               Zhanzhan Cheng and
+               Yi Niu and
+			   },
+  title     = {{PMAL}: Open Set Recognition via Robust Prototype Mining},
+  booktitle = {AAAI},
+  year      = {2022},
+}
+        </pre>
+
+		<br><br>
+				
+
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/all.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".footer").load("/common/footer.html");
+            $(".navigation").load("/common/navigation.html");
+        });
+    </script>
+</body>
+</html>
