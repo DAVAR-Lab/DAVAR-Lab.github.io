@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+
+    <title>DAVAR LAB</title>
+    <meta name="description" content="">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet'
+        type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/small_logo.png">
+</head>
+
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
+    <div class="navigation"></div>
+
+    <div class="news top-container">
+        <div class="container-fluid">
+            <div id="primarycontent">
+                <center>
+                    <h2>Scanned Chinese Invoice Dataset</h2>
+                </center>
+                <center>
+                    <h3>
+                        <a href="https://davar-lab.github.io/" target="_blank">DAVAR LAB</a>
+                    </h3>
+                </center>
+                <center>
+                  
+         
+
+                <p>
+                    <h2>Introduction</h2>
+
+                    <div style="font-size:18px">
+						<p> 					
+						The SCID dataset is from <a href="/competition/CSIG2022-invoice.html">CSIG 2022 Competition on Invoice Recognition and Analysis </a>.
+                        </p>
+                        <p> 
+
+						The  dataset contains six types of invoices for algorithm verification. They are Taxi Invoice, Train Invoice, Passenger Invoice, Toll Invoice, Air Itinerary Invoice and Quota Invoice. All images have been were desensitized. Some visualization examples are shown as follows.
+						
+                        </p>
+
+						<table width= "100%" border="1" align="center">
+								<tr> 
+								
+								<td align="center" width="33%"> <img src="/img/invoice_contest/air.jpg"/>  </td>
+								<td align="center" width="33%"> <img src="/img/invoice_contest/general.jpg"/> </td>
+								<td align="center" width="33%"> <img src="/img/invoice_contest/taxi.jpg"/> </td>
+								</tr> 
+							
+								<tr>
+								<td align="center" width="33%"> Air Ticket</td>
+								<td align="center" width="33%"> General Quota Invoice</td>
+								<td align="center" width="33%"> Taxi Invoice</td>
+								</tr>
+								
+								<tr>
+								<td  align="center"  width="33%"> <img src="/img/invoice_contest/pass.jpg"/> </td>
+								<td align="center" width="33%"> <img src="/img/invoice_contest/toll.jpg"/> </td>
+								<td align="center" width="33%"> <img src="/img/invoice_contest/train.jpg"/> </td>
+								</tr>
+								
+								</tr>
+								<td align="center" width="33%"> Passenger Transport Invoice</td>
+								<td align="center" width="33%"> Toll Invoice</td>
+								<td align="center" width="33%"> Train Ticket</td>
+								</tr>
+								
+							</table>
+                    </div>
+					
+                   
+
+                    <h2>Annotation</h2>
+					<div style="font-size:18px">
+					<p>We provide two types annotation files for the training data, <strong>ocr.json </strong> and <strong> gt.json </strong>: </p>
+					
+					<p> <strong> ocr.json </strong> </p>
+						  <p style="text-align:justify; text-justify:inter-ideograph;"> 
+						 This file contains the annotations for each text instance's location and content, defined as follows:
+						  </p>
+						  
+						<p>
+						<img width="600px" href="/img/invoice_contest/abf3b61f-cefe-374e-2ace-ac1fbdf3f3af_1.jpg"/> 
+						
+						  <pre>
+"abf3b61f-cefe-374e-2ace-ac1fbdf3f3af_1.jpg": {
+	"height": 891,
+	"width": 1245,
+	"content_ann": {
+		"texts": [
+			"112002070106", "12921503", "壹佰元整", "###", ...
+		]
+		"bboxes": [
+			[ 453, 338, 830, 328, 832, 383, 454, 393 ],
+			[ 446, 411, 739, 406, 741, 466, 448, 473 ],
+			[ 462, 603, 809, 595, 812, 683, 464, 693 ],
+			[ 428, 347, 883, 364, 882, 709, 419, 710 ],
+			...
+		]
+	},
+},
+						</pre>
+			 where, 
+	<br>
+  <strong>- texts</strong>: text content annotations for each text instance,
+	<br>
+  <strong>-  bboxes</strong>: location for each text instance,
+    <br>
+  				
+						</p>
+						
+						<p> <strong> gt.json </strong> </p>
+						 <p style="text-align:justify; text-justify:inter-ideograph;"> 
+						 This file contains the entity annotation groundtruth. An example corresponding to the above ocr.json is as follows:
+						  <pre>
+"abf3b61f-cefe-374e-2ace-ac1fbdf3f3af_1.jpg": {
+	"发票代码":112002070106,
+	"发票号码":12921503,
+	"金额":"壹佰元整",
+}
+						</pre>			
+						 </p> </div>
+					
+					
+					<h2>Terms of Use</h2>
+					
+					<div style="font-size:18px">
+					<li> The public annotations belong to Hikvision Resarch Institute and are licensed under the <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. </li>
+					</div>    
+
+
+					<h2>Dataset Download</h2>
+					
+					<div style="font-size:18px">
+					To obtain the download link, please download the file of <a href="/files/Application_Form_for_Using_SCID.doc" target="_blank"> Application_Form_for_Using_SCID.doc</a>, and fill in the required information. 
+					Scan the signed file and send it to <a href=mailto:qiaoliang6@hikvision.com> qiaoliang6@hikvision.com </a>. We will send you the dataset download link.
+					</div>  					
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/all.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".footer").load("/common/footer.html");
+            $(".navigation").load("/common/navigation.html");
+        });
+    </script>
+
+</body>
+
+</html>
