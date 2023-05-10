@@ -11,6 +11,45 @@ a{
 	min-height: 90px
 }
 </style>
+<style>
+        .tab {
+            margin: 0 auto;
+            width: 800px;
+            padding-top: 20px;
+        }
+        
+        .tab_list {
+            height: 50px;
+            border-bottom: 1px solid red;
+        }
+        
+        .tab_list ul {
+            padding-left: 0px;
+            height: 50px;
+        }
+        
+        .tab li {
+            float: left;
+            display: inline-block;
+            box-sizing: border-box;
+            padding-left: 20px;
+            padding-right: 20px;
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+            margin: 0;
+        }
+        
+        .item {
+            display: none;
+        }
+        
+        .current {
+            background-color: brown;
+            color: white;
+        }
+    </style>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,28 +60,24 @@ a{
     <meta name="description" content="">
     <link rel="alternate" type="application/rss+xml" href="feed.xml">
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
-
-    <!-- Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet'
-        type='text/css'>
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="/img/small_logo.png">
 </head>
 
 <body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
     <div class="navigation"></div>
     <div class="news top-container">
-        <div class="container-fluid">
-            <div class="post">
-                
-               
-                <h2>Conference Papers</h2>
-				
-				 <!--ICME 2023 FSCIL-->
+       <div class="tab">
+        <div class="tab_list">
+            <ul>
+                <li class="current">商品介绍</li>
+                <li>规格与包装</li>
+                <li>商品评价(100万+)</li>
+                <li>售后保障</li>
+ 
+            </ul>
+        </div>
+        <div class="tab_con">
+            <div class="item current">
+                <!--ICME 2023 FSCIL-->
                 <div class="media">
                     <div class="media-body">
                         <div class="col-xs-3">
@@ -754,453 +789,55 @@ Document Understanding</a>
                     </div>
                 </div>
                 <hr />  
-				<h2>Cooperation Papers</h2> 
-				
-				<!--COLING2022 -->
-                <div class="media">
-                    <div class="media-body">
-                        <div class="col-xs-3">
-                            <img src="img/publications/COLING2022.png">
-                        </div>
-
-                        <h4 class="media-heading">
-			    <a href="#">Read Extensively, Focus Smartly: A Cross-document Semantic
-Enhancement Method for Visual Documents NER</a>                
-                            <br>
-                            <small>Jun Zhao, Xin Zhao, Wenyu Zhan, Tao Gui, Qi Zhang, Liang Qiao, Zhanzhan Cheng, Shiliang Pu</small>
-                        </h4>
-                        <small>Accepted by
-                            <strong>
-                                <font color="red">COLING 2022 </font>
-                            </strong>
-							(cooperation paper)
-                            <br>
-                            <a href="https://aclanthology.org/2022.coling-1.177.pdf" target="_blank" 
-                               style="color: #990000">[Paper] </a>
-                        </small>
-                    </div>
-                </div>
-				<hr />
-				
-				<!--KDD2022 -->
-                <div class="media">
-                    <div class="media-body">
-                        <div class="col-xs-3">
-                            <img src="img/publications/kdd2022.png">
-                        </div>
-
-                        <h4 class="media-heading">
-			    <a href="#">Active Model Adaptation Under Unknown Shift</a>                
-                            <br>
-                            <small>Jiejing Shao, Yunlu Xu, Zhanzhan Cheng, Yufeng Li</small>
-                        </h4>
-                        <small>Accepted by
-                            <strong>
-                                <font color="red">KDD 2022 </font>
-                            </strong>
-							(cooperation paper)
-                            <br>
-                            <a href="https://dl.acm.org/doi/10.1145/3534678.3539262" target="_blank" 
-                               style="color: #990000">[Paper]</a>
-                        </small>
-                    </div>
-                </div>
-				<hr />
-				
-				 <!--acl2022 -->
-                <div class="media">
-                    <div class="media-body">
-                        <div class="col-xs-3">
-                            <img src="img/publications/acl2022_miner.png">
-                        </div>
-
-                        <h4 class="media-heading">
-			    <a href="#">MINER: Improving Out-of-Vocabulary Named Entity Recognition from an Information Theoretic Perspective</a>                
-                            <br>
-                            <small>Xiao Wang, Shihan Dou, Limao Xiong, Yicheng Zou, Qi Zhang, Tao Gui, Liang Qiao, Zhanzhan Cheng, Xuanjing Huang</small>
-                        </h4>
-                        <small>Accepted by
-                            <strong>
-                                <font color="red">ACL 2022 </font>
-                            </strong>
-							(cooperation paper)
-                            <br>
-                            <a href="https://arxiv.org/pdf/2204.04391.pdf" target="_blank" 
-                               style="color: #990000">[Paper]</a>
-                        </small>
-                    </div>
-                </div>
-				<hr />
-				 <!--acl2022 -->
-                <div class="media">
-                    <div class="media-body">
-                        <div class="col-xs-3">
-                            <img src="img/publications/acl2022_flooding.png">
-                        </div>
-
-                        <h4 class="media-heading">
-			    <a href="#">Flooding-X: Improving BERT’s Resistance to Adversarial Attacks via Loss-Restricted Fine-Tuning</a>                
-                            <br>
-                            <small>Qin Liu, Rui Zheng, Rong Bao, Jingyi Liu, ZhiHua Liu, Zhanzhan Cheng, Liang Qiao, Tao Gui, Qi Zhang, Xuanjing Huang</small>
-                        </h4>
-                        <small>Accepted by
-                            <strong>
-                                <font color="red">ACL 2022 </font>
-                            </strong>
-							(cooperation paper)
-                            <br>
-                            <a href="http://qizhang.info/paper/acl2022.Flooding.pdf" target="_blank" 
-                               style="color: #990000">[Paper]</a>
-                        </small>
-                    </div>
-                </div>
-				<hr />
-				
-				 <!--NeurIPS 2021 -->
-                <div class="media">
-                    <div class="media-body">
-                        <div class="col-xs-3">
-                            <img src="img/publications/neurips2021.png">
-                        </div>
-
-                        <h4 class="media-heading">
-			    <a href="publication/ijcai2021.html">STEP : Out-of-Distribution Detection in the Presence of Limited In-distribution Labeled Data</a>                
-                            <br>
-                            <small>Zhi Zhou, Lanzhe Guo, Zhanzhan Cheng, Yufeng Li<sup>†</sup>, Shiliang Pu</small>
-                        </h4>
-                        <small>Accepted by
-                            <strong>
-                                <font color="red">NeurIPS 2021 </font>
-                            </strong>
-							(cooperation paper)
-                            <br>
-                            <a href="https://proceedings.neurips.cc/paper/2021/file/f4334c131c781e2a6f0a5e34814c8147-Paper.pdf" target="_blank" 
-                               style="color: #990000">[Paper]</a>
-                        </small>
-                    </div>
-                </div>
-                <hr /> 
-				<!--IJCAI 2021 -->
-                <div class="media">
-                    <div class="media-body">
-                        <div class="col-xs-3">
-                            <img src="img/publications/ijcai2021.png">
-                        </div>
-
-                        <h4 class="media-heading">
-			    <a href="publication/ijcai2021.html">Towards Robust Model Reuse in the Presence of Latent Domains</a>                
-                            <br>
-                            <small>Jiejing Shao, Zhanzhan Cheng, Yufeng Li<sup>†</sup>, Shiliang Pu</small>
-                        </h4>
-                        <small>Accepted by
-                            <strong>
-                                <font color="red">IJCAI 2021 </font> 
-                            </strong>
-							(cooperation paper)
-                            <br>
-                            <a href="https://cs.nju.edu.cn/liyf/paper/ijcai21-MRL.pdf" target="_blank" 
-                               style="color: #990000">[Paper]</a>
-                        </small>
-                    </div>
-                </div>
-                <hr /> 	
-				
-				
-				 <h2>Journal Papers</h2> 
-                <hr />                  
-				
-				<!-- tip2021_free -->
-                <div class="media">
-                    <div class="media-body">
-                        <div class="col-xs-3">
-                            <img src="/img/publications/tip2021_free.png" width="1000">
-                        </div>
-
-
-                        <h4 class="media-heading">
-                            <a href="/publication/tip2021_free.html">FREE: A Fast and Robust End-to-End Video Text Spotter</a>  
-                            <br>
-                            <small>Zhanzhan Cheng<sup>*</sup>, Jing Lu<sup>*</sup>, Baorui Zou, Liang Qiao, Yunlu Xu, Shiliang Pu<sup>†</sup>, Yi Niu, Fei Wu, Shuigeng Zhou</small>
-                        </h4>
-
-                        <small>Accepted by
-                            <strong>
-                                <font color="red">TIP 2021</font>
-                            </strong>
-							<br>
-							<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9266586" target="_blank" 
-                               style="color: #990000">[Paper]</a>
-                        </small>
-                        <br>
-                    </div>
-                </div>
-                <hr />
-				
-				
-		
-                <h2>Technique Reports</h2> 
-                <hr />   
-				<!-- iccv2021_sslad_b -->
-				<div class="media">
-                    <div class="media-body">
-                        <div class="col-xs-3">
-                            <img src="/img/publications/iccv2021_workshop_sslad_1.png" width="1000">
-                        </div>
-
-
-                        <h4 class="media-heading">
-                            <a href="/competition/SSLAD-Track-1">2nd Place Solution SSLAD Track 1 - O2O Semi-Supervised Framwork</a>  
-                            <br>
-                            <small>Beitong Zhou<sup>*</sup>, Donghao Gu<sup>*</sup>, Binbin Zhang<sup>*</sup>, Sanli Tang, Yunlu Xu<sup>†</sup>, Zhanzhan Cheng, Yi Niu</small>
-                        </h4>
-
-                        <small>Technique report of  
-                            <strong>
-                                <font color="red">ICCV 2021 Workshop SSLAD Track-1</font>
-                            </strong>
-							competition.
-							<br>
-							<a href="/files/iccv2021sslad/ICCV2021-SSLAD Track1-2nd.pdf" target="_blank" 
-                               style="color: #990000">[Paper]</a>
-                        </small>
-                        <br>
-                    </div>
-                </div>
-				<!-- iccv2021_sslad_b -->
-				<div class="media">
-                    <div class="media-body">
-                        <div class="col-xs-3">
-                            <img src="/img/publications/iccv2021_workshop_sslad_b.png" width="1000">
-                        </div>
-
-
-                        <h4 class="media-heading">
-                            <a href="/competition/SSLAD-Track-3">Technical Report for ICCV 2021 Challenge SSLAD-Track3B: Transformers Are Better Continual Learners</a>  
-                            <br>
-                            <small>Duo Li<sup>*</sup>, Guimei Cao<sup>*</sup>, Yunlu Xu, Zhanzhan Cheng, Yi Niu</small>
-                        </h4>
-
-                        <small>Technique report of  
-                            <strong>
-                                <font color="red">ICCV 2021 Workshop SSLAD Track-3B</font>
-                            </strong>
-							competition.
-							<br>
-							<a href="/files/iccv2021sslad/sslad-report-3B.pdf" target="_blank" 
-                               style="color: #990000">[Paper]</a>
-                        </small>
-                        <br>
-                    </div>
-                </div>
-				<!-- icdar2021_svts -->
-				<div class="media">
-                    <div class="media-body">
-                        <div class="col-xs-3">
-                            <img src="/img/competitions/icdar2021svts.png" width="1000">
-                        </div>
-
-
-                        <h4 class="media-heading">
-                            <a href="/competition/icdar2021svts.html">ICDAR 2021 Competition on Scene Video Text Spotting</a>  
-                            <br>
-                            <small>Zhanzhan Cheng<sup>*</sup>, Jing Lu<sup>*</sup>, Baorui Zou<sup>*</sup>, Shuigeng Zhou, Fei Wu</small>
-                        </h4>
-
-                        <small>Technique report of  
-                            <strong>
-                                <font color="red">ICDAR 2021 SVTS </font>
-                            </strong>
-							competition
-							<br>
-							<a href="https://arxiv.org/pdf/2107.11919.pdf" target="_blank" 
-                               style="color: #990000">[Paper]</a>
-							<a href="/files/icdar2021_svts/Comp-ST_01.pdf" target="_blank" 
-                               style="color: #990000">[Poster]</a>
-							<a href="https://www.bilibili.com/video/BV1ZU4y1n7ZF/" target="_blank" 
-                               style="color: #990000">[Video]</a>
-                        </small>
-                        <br>
-                    </div>
-                </div>
-				<!-- icdar2021_svts -->
-				<div class="media">
-                    <div class="media-body">
-                        <div class="col-xs-3">
-                            <img src="/img/publications/icdar2021_rrc.png" width="1000">
-                        </div>
-
-
-                        <h4 class="media-heading">
-                            <a href="/competition/icdar2021rrc.html">ICDAR 2021 Competition on Robust Reading Challenge - ICText</a>  
-                            <br>
-                            <small>Qiyao Wang<sup>*</sup>, Pengfei Li<sup>*</sup>, Li Zhu, Yi Niu</small>
-                        </h4>
-
-                        <small>Technique report of  
-                            <strong>
-                                <font color="red">ICDAR 2021 RRC-ICText </font>
-                            </strong>
-							competition
-							<br>
-							<a href="https://arxiv.org/pdf/2104.03544.pdf" target="_blank" 
-                               style="color: #990000">[Paper]</a>
-							
-                        </small>
-                        <br>
-                    </div>
-                </div>
-
-               
-				
-				<h2>Manuscripts (Preprints)</h2> 
-                <hr />
-				<!-- arxiv 2022  TRIE++ -->
-                <div class="media">
-                    <div class="media-body">
-                        <div class="col-xs-3">
-                            <img src="/img/publications/arxiv2022_e2-aen.png">
-                        </div>
-
-                        <h4 class="media-heading">
-			    <a href="/publication/arxiv2022_e2-aen.html">E2-AEN: End-to-End Incremental Learning with Adaptively Expandable Network</a>                       
-                            <br>
-                            <small>Guimei Cao<sup>*</sup>, Zhanzhan Cheng<sup>*</sup>, Yunlu Xu<sup>*</sup>, Duo Li, Shiliang Pu, Yi Niu, Fei Wu </small>
-                        </h4>
-
-                        <small>Available on
-                            <strong>
-                                <font color="red">arXiv</font>
-                            </strong>
-                            <br>
-                            <a href="https://arxiv.org/pdf/2207.06754.pdf" target="_blank" 
-                               style="color: #990000">[Paper]</a>
-                        
-                        </small>
-                    </div>
-                </div>
-                <hr />
-				<!-- arxiv 2022  TRIE++ -->
-                <div class="media">
-                    <div class="media-body">
-                        <div class="col-xs-3">
-                            <img src="/img/publications/arxiv2022_trie++.png">
-                        </div>
-
-                        <h4 class="media-heading">
-			    <a href="/publication/arxiv2022_trie++.html">TRIE++: Towards End-to-End Information Extraction from Visually Rich Documents</a>                       
-                            <br>
-                            <small>Zhanzhan Cheng<sup>*</sup>, Peng Zhang<sup>*</sup>, Can Li<sup>*</sup>, Qiao Liang, Yunlu Xu, Pengfei Li, Shiliang Pu, Yi Niu, Fei Wu </small>
-                        </h4>
-
-                        <small>Available on
-                            <strong>
-                                <font color="red">arXiv</font>
-                            </strong>
-                            <br>
-                            <a href="https://arxiv.org/pdf/2207.06744.pdf" target="_blank" 
-                               style="color: #990000">[Paper]</a>
-                        
-                        </small>
-                    </div>
-                </div>
-                <hr />  
-				
-				
-				<!-- arxiv 2020_da -->
-                <div class="media">
-                    <div class="media-body">
-                        <div class="col-xs-3">
-                            <img src="/img/publications/arxiv2020_da.png">
-                        </div>
-
-                        <h4 class="media-heading">
-			    <a href="/publication/arxiv2020_da.html">Learning a Domain Classifier Bank for Unsupervised Adaptive Object Detection</a>                       
-                            <br>
-                            <small>Sanli Tang, Zhanzhan Cheng, Shiliang Pu, Dashan Guo, Yi Niu, Fei Wu </small>
-                        </h4>
-
-                        <small>Available on
-                            <strong>
-                                <font color="red">arXiv</font>
-                            </strong>
-                            <br>
-                            <a href="https://arxiv.org/pdf/2007.02595" target="_blank" 
-                               style="color: #990000">[Paper]</a>
-                        
-                        </small>
-                    </div>
-                </div>
-                <hr />  
-
-				
-				<!-- arxiv 2020_objectqa -->
-                <div class="media">
-                    <div class="media-body">
-                        <div class="col-xs-3">
-                            <img src="/img/publications/arxiv2020_objectqa.png">
-                        </div>
-
-                        <h4 class="media-heading">
-			    <a href="/publication/arxiv2020_objectqa.html">Object-QA: Towards High Reliable Object Quality Assessment</a>                       
-                            <br>
-                            <small>Jing Lu<sup>*</sup>, Baorui Zou<sup>*</sup>, Zhanzhan Cheng<sup>*</sup>, Shiliang Pu, Shuigeng Zhou, Yi Niu, Fei Wu </small>
-                        </h4>
-
-                        <small>Available on
-                            <strong>
-                                <font color="red">arXiv</font>
-                            </strong>
-                            <br>
-                            <a href="https://arxiv.org/pdf/2005.13116.pdf" target="_blank" 
-                               style="color: #990000">[Paper]</a>
-                        
-                        </small>
-                    </div>
-                </div>
-                <hr />  
-                
-				<!-- arxiv 2020_rg -->
-                <div class="media">
-                    <div class="media-body">
-                        <div class="col-xs-3">
-                            <img src="/img/publications/arxiv2020_rg.png">
-                        </div>
-
-                        <h4 class="media-heading">
-			    <a href="/publication/arxiv2020_rg.html">Refined Gate: A Simple and Effective Gating Mechanism for Recurrent Units</a>                       
-                            <br>
-                            <small>Zhanzhan Cheng<sup>*</sup>, Yunlu Xu<sup>*</sup>, Mingjian Cheng, Yu Qiao, Shiliang Pu, Yi Niu, Fei Wu </small>
-                        </h4>
-
-                        <small>Available on
-                            <strong>
-                                <font color="red">arXiv</font>
-                            </strong>
-                            <br>
-                            <a href="https://arxiv.org/pdf/2002.11338.pdf" target="_blank" 
-                               style="color: #990000">[Paper]</a>
-                        
-                        </small>
-                    </div>
-                </div>
-                <hr />  
-				
-				
-
+            </div>
+ 
+            <div class="item">
+                规格与包装 主体 首销日期：23日 产品名称：iPhone 12 上市月份：10月 入网型号：A2404 上市年份：2020年
+            </div>
+            <div class="item">
+                商品评价 运行非常流畅，轻松到手⑤千1，是从底下视频拿到的！拍照效果一流，这款刚出来的紫色非常喜欢，外形设计漂亮，屏幕显示出众，音质也非常完美，不错的。手机包装也很好，发货速度很快，非常的漂亮，很喜欢。双摄像头拍照，很快5G运行，速度也很棒非常的满意。双扬声器音质很棒，新的外观设计看起来非常的绚丽，手感也很好，玻璃质感很好。系统确认比安卓的流畅多了，尺寸刚刚好，不会太大屏幕细腻，色彩还原度高，采用高通基带，5G信号还是不错的，上网速度快特别喜欢紫色，颜值特别高没办法不热爱。当收藏款来购买的啊，这次京东商城活动力度大就入手了。非常流畅，屏幕显示细腻，看着很舒服，夜景提升很大，拍出来的效果非常符合苹果的水准，和以往的苹果无home键，需要点时间去适应。手机外型尺寸正合适，对经典的直角边设计也非常适应。使用感受特别好，开机顺畅，按键灵敏，运行速度快，待机时间长，音效好，拍照清晰，内存足够充足！立刻下载了好多实用软件，非常开心！太小刚刚好，挺顺手的，经典的直边边框手感不错，苹果的优势是系统，系统不用说了，运行流畅的代名词。非常流畅，屏幕显示细腻，看着很舒服，夜景提升很大，拍出来的效果非常符合苹果的水准。
+            </div>
+            <div class="item">
+                售后保障模块内容 厂家服务 本商品质保周期为1年质保，在此时间范围内可提交维修申请，具体请以厂家服务为准。 如因质量问题或故障，凭厂商维修中心或特约维修点的质量检测证明，享受7日内退货，15日内换货，15日以上在质保期内享受免费保修等三包服务！ (注:如厂家在商品介绍中有售后保障的说明,则此商品按照厂家说明执行售后保障服务。)
             </div>
         </div>
     </div>
 
+    </div>
+
 
     <div class="footer"></div>
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/all.min.js"></script>
+    
 
     <script>
-        $(document).ready(function () {
-            $(".footer").load("/common/footer.html");
-            $(".navigation").load("/common/navigation.html");
-        });
+		
+		
+		var tab_list = document.querySelector('.tab_list');
+        var list = tab_list.querySelectorAll('li');//获取所有的选项卡标签
+ 
+        var items = document.querySelectorAll('.item');//获取所有的内容显示模块
+		//在循环中添加点击事件，为每个选项卡添加索引index
+        for (var i = 0; i < list.length; i++) {
+            list[i].setAttribute('index', i);
+            //排他思想
+            list[i].onclick = function() {
+            	//1.点击后先消除所有选项卡的样式
+                for (var i = 0; i < list.length; i++) {
+                    list[i].className = '';
+                }
+                //2.绑定当前选项卡的样式(实现背景色变红)
+                this.className = 'current';
+                
+                //内容显示模块
+                var index = this.getAttribute('index');//先获得当前点击选项卡的索引值
+                //1.将所有模块隐藏
+                for (var i = 0; i < items.length; i++) {
+                    items[i].style.display = 'none';
+                }
+                //2.再显示对应index下的模块
+                items[index].style.display = 'block';
+            }
+        }
     </script>
 </body>
 
