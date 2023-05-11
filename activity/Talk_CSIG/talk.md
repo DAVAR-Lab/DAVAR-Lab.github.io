@@ -5,6 +5,6 @@ CSIG文档图像分析与识别专业委员会学术微沙龙（简称：文档�
 
 ![](/activity/Talk_CSIG/1.png)
 
-[相关新闻] (https://mp.weixin.qq.com/s?__biz=MzUxMDE4MzAzOA==&mid=2247574999&idx=3&sn=53ab4afe9e0fb59fb182b69f7ce5cb8c&chksm=f90536c6ce72bfd044a24b40084997d3a35440e255c1aafea75109382816fb47a8838e20f755&scene=27)
+[相关新闻](https://mp.weixin.qq.com/s?__biz=MzUxMDE4MzAzOA==&mid=2247574999&idx=3&sn=53ab4afe9e0fb59fb182b69f7ce5cb8c&chksm=f90536c6ce72bfd044a24b40084997d3a35440e255c1aafea75109382816fb47a8838e20f755&scene=27)
 
 [视频回放](https://www.bilibili.com/video/BV1jP4y1F7Xw?share_source=copy_web)

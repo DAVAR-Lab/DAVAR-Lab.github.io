@@ -7,6 +7,6 @@
 
 ![](/activity/Talk_high/1.png)
 
-[相关新闻] (https://mp.weixin.qq.com/s?__biz=MzUxMDE4MzAzOA==&mid=2247570751&idx=2&sn=0b75c8255ae23a2578da1906f5f239a3&chksm=f905462ece72cf383ea52116b5a9f90bde0a280c636e092354349cf696fe2640c075ff1a290f&scene=27)
+[相关新闻](https://mp.weixin.qq.com/s?__biz=MzUxMDE4MzAzOA==&mid=2247570751&idx=2&sn=0b75c8255ae23a2578da1906f5f239a3&chksm=f905462ece72cf383ea52116b5a9f90bde0a280c636e092354349cf696fe2640c075ff1a290f&scene=27)
 
-[视频回放][https://www.bilibili.com/video/BV1LZ4y1a7zr)
+[视频回放](https://www.bilibili.com/video/BV1LZ4y1a7zr)
