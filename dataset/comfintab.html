@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+
+    <title>DAVAR LAB</title>
+    <meta name="description" content="">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet'
+          type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/small_logo.png">
+</head>
+
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
+<div class="navigation"></div>
+
+<div class="news top-container">
+    <div class="container-fluid">
+        <div id="primarycontent">
+            <center>
+                <h2>ComFinTab dataset</h2>
+            </center>
+            <center>
+                <h3>
+                    <a href="https://davar-lab.github.io/" target="_blank">DAVAR LAB</a>
+                </h3>
+            </center>
+
+            <div>
+
+                <p>
+                <h2>Introduction</h2>
+
+                <div style="font-size:18px">
+                    <p>
+                        The ComFinTab dataset is from <a href="/publication/acmmm2022_ctunet.html">End-to-End Compound
+                        Table Understanding with Multi-Modal Modeling </a>.
+                    </p>
+
+                    <p>
+                        The dataset contains 10,000 compound tables from the annual reports of the Chinese listed companies, which can support both table recognition and table understanding tasks. Some
+                        visualization examples are shown as follows.
+                    </p>
+
+                    <table width="100%" border="1" align="center">
+                        <tr>
+
+                            <td align="center" width="33%"><img src="/img/comfintab/ctunet (1).png"/></td>
+                            <td align="center" width="33%"><img src="/img/comfintab/ctunet (2).png"/></td>
+                            <td align="center" width="33%"><img src="/img/comfintab/ctunet (3).png"
+                                                                style="height:350px"/></td>
+                        </tr>
+
+                        <tr>
+                            <td align="center" width="33%"> A compound table without cell colors. It looks like a relational table but is actually composed of two (left and right) sub-tables</td>
+                            <td align="center" width="33%"> A table composed of several entity tables and a relational table, which has distinct cell colors to distinguish cell types. </td>
+                            <td align="center" width="33%"> A table composed of several entity tables and a relational table. All the cells have the same color. </td>
+                        </tr>
+
+                        <tr>
+                            <td align="center" width="33%"><img src="/img/comfintab/ctunet (4).png"/></td>
+                            <td align="center" width="33%"><img src="/img/comfintab/ctunet (5).png"/></td>
+                            <td align="center" width="33%"><img src="/img/comfintab/ctunet (6).png"/></td>
+                        </tr>
+
+                        </tr>
+                        <td align="center" width="33%"> A Chinese table composed of a entity tables and a relational table. </td>
+                        <td align="center" width="33%"> Demonstrates a particular form of table arrangement, whose some left heads are projected vertically.</td>
+                        <td align="center" width="33%"> Presents a basic matrix table, but it especially contains some merged "DA" cells, which is also easy to bring understanding difficulties to the model.</td>
+                        </tr>
+
+                    </table>
+                </div>
+
+
+                <h2>Annotation</h2>
+                <div style="font-size:18px">
+                    <p>We providee annotations that support both table recognition (cells local, cells column/row
+                        indexes, textual position, and textual content) and table understanding tasks(cells type, cells
+                        linking), defined as follows: </p>
+
+                    <pre>
+"0020.jpeg": {
+	"height": 260,
+	"width": 1335,
+	"content_ann": {
+		"bboxes": [
+			[27, 27, 1356, 27, 1356, 82, 27, 82],       # The bboxes of real cells.
+			[27, 82, 1356, 82, 1356, 181, 27, 181],     # ditto
+			[27, 181, 397, 181, 397, 281, 27, 281],     # ditto
+			[397, 181, 1356, 181, 1356, 281, 397, 281], # ditto
+			[11, 27, 27, 27, 27, 82, 11, 82],           # The coordinates of the virtual row node. The length in the "X" direction is fixed to 16 pixels
+			[11, 82, 27, 82, 27, 181, 11, 181],         # ditto
+			[11, 181, 27, 181, 27, 281, 11, 281],       # ditto
+			[27, 11, 397, 11, 397, 27, 27, 27],         # The coordinates of the virtual column node. The length in the "Y" direction is fixed to 16 pixels
+			[397, 11, 1356, 11, 1356, 27, 397, 27]],    # ditto
+		"texts": [
+			"Deliberation section of auditing report of IC",                # The texts of real cells.
+			"In our opinion, the Company (Zhonglu), in line with Basic No", # ditto
+			"Disclosure details of audit report\nof internal control",      # ditto
+			"Disclosed",                                                    # ditto.
+			"[CLS]",            # The texts of the virtual node is uniformly set to "[CLS]"
+			"[CLS]",            # ditto
+			"[CLS]",            # ditto
+			"[CLS]",            # ditto
+			"[CLS]"],           # ditto
+		"cells": [
+			[0, 0, 0, 1],       # Start row, start column, end row and end column of real cells.
+			[1, 0, 1, 1],       # ditto
+			[2, 0, 2, 0],       # ditto
+			[2, 1, 2, 1],       # ditto
+			[0, -1, 0, -1],     # Virtual row node of the first row. Note that the column number of virtual row node is - 1.
+			[1, -1, 1, -1],     # Virtual row node of the seconde row. Note that the column number of virtual row node is - 1.
+			[2, -1, 2, -1],     # Virtual row node of the third row. Note that the column number of virtual row node is - 1.
+			[-1, 0, -1, 0],     # Virtual column node of the first column. Note that the row number of virtual column node is - 1.
+			[-1, 1, -1, 1]],    # Virtual column node of the second column. Note that the row number of virtual column node is - 1.
+		"labels": [
+			[0], 	# top header
+			[2], 	# data
+			[1], 	# left header
+			[2], 	# data
+			[4], 	# virtual node
+			[4], 	# ditto
+			[4], 	# ditto
+			[4], 	# ditto
+			[4]], 	# ditto
+		"relations": [
+			[0, 0, 0, 0, 0, 0, 0, 0, 0], # Relation description of 0-th cell. This cells is not a root cell.
+			[1, 0, 0, 0, 0, 2, 0, 0, 0], # Relation description of 1-th cell. The right child node of this cell is 0-th cell([0, 0, 0, 1]) and left child node is 5-th cell([1, -1, 1, -1]).
+			[0, 0, 0, 0, 0, 0, 0, 0, 0], # Relation description of 2-th cell. This cells is not a root cell.
+			[0, 0, 2, 0, 0, 0, 0, 0, 1], # Relation description of 3-th cell. The right child node of this cell is 2-th cell([2, 0, 2, 0]) and left child node is 8-th cell([-1, 1, -1, 1]]).
+			[0, 0, 0, 0, 0, 0, 0, 0, 0], # Relation description of 4-th cell. This cells is not a root cell.
+			[0, 0, 0, 0, 0, 0, 0, 0, 0], # ditto
+			[0, 0, 0, 0, 0, 0, 0, 0, 0], # ditto
+			[0, 0, 0, 0, 0, 0, 0, 0, 0], # ditto
+			[0, 0, 0, 0, 0, 0, 0, 0, 0]] # ditto
+	}
+},
+            </pre>
+                    where,
+                    <br>
+                    <strong>- bboxes</strong>: location for each cell. For virtual row/column node, the length in the "X"/"Y" direction is fixed to 16 pixels.
+                    <br>
+                    <strong>- texts</strong>: text content annotations for each cell. The texts of the virtual node is uniformly set to "[CLS]".
+                    <br>
+                    <strong>- cells</strong>: start row, start column, end row and end column of real cell. The column number of virtual row node is - 1; The row number of virtual column node is - 1.
+                    <br>
+                    <strong>- labels</strong>: label of each cell. There are 5 categories in total:top header, left header, data, other, virtual node.
+                    <br>
+                    <strong>- relations</strong>: relation description of each cell.
+                    <br>
+                    </p>
+                    <p style="text-align:justify; text-justify:inter-ideograph;"></p></div>
+
+
+                <h2>Terms of Use</h2>
+
+                <div style="font-size:18px">
+                    <li> The public annotations belong to Hikvision Resarch Institute and are licensed under the <a
+                            href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+                        Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+                    </li>
+                </div>
+
+                <h2>Citation</h2>
+
+                <div style="font-size:18px">
+                   
+				   <pre>
+				   @inproceedings{DBLP:conf/mm/LiL0LCNPL22,
+								  author       = {Zaisheng Li and
+												  Yi Li and
+												  Liang Qiao and
+												  Pengfei Li and
+												  Zhanzhan Cheng and
+												  Yi Niu and
+												  Shiliang Pu and
+												  Xi Li},
+
+								  title        = {End-to-End Compound Table Understanding with Multi-Modal Modeling},
+								  booktitle    = {ACM MM},
+								  pages        = {4112--4121},
+								  year         = {2022},
+								}
+				   </pre>
+                </div>
+
+
+                <h2>Dataset Download</h2>
+
+                
+				<div style="font-size:18px">
+				To obtain the download link, please download the file of <a href="/files/scid/Application_Form_for_Using_ComFinTab.doc" target="_blank"> Application_Form_for_Using_ComFinTab.doc</a>, and fill in the required information. 
+				Scan the signed file and send it to <a href=mailto:qiaoliang6@hikvision.com> qiaoliang6@hikvision.com </a>. We will send you the dataset download link.
+				</div>  	
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer"></div>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/all.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $(".footer").load("/common/footer.html");
+        $(".navigation").load("/common/navigation.html");
+    });
+</script>
+
+</body>
+
+</html>
