@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+
+    <title>DAVAR LAB</title>
+    <meta name="description" content="">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet'
+        type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/small_logo.png">
+</head>
+
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
+    <div class="navigation"></div>
+
+    <div class="news top-container">
+        <div class="container-fluid">
+            <div id="primarycontent">
+                <center>
+                    <h2>Multi-Domain Chinese Document Visual Question (MDCD-VQA) Dataset</h2>
+                </center>
+                <center>
+                    <h3>
+                        <a href="https://davar-lab.github.io/" target="_blank">DAVAR LAB</a>
+                    </h3>
+                </center>
+            
+				<div>
+
+                <p>
+                    <h2>Introduction</h2>
+
+                    <div style="font-size:18px">
+						<p> 					
+						The MDCD-VQA dataset contains multi-domain chinese documents that collected from different sources, which can be roughly related to 7 domains, including Business, Financial, Medical, Education, Lifestyle, Transportation, Culture. This dataset can be used not only to perform traditional DocVQA tasks, but also to evaluate existing Large Vision Language Models (LVLMs), which can be a good test of the generalizability of modeling schemes.  
+                        </p>
+				
+                        <p> 
+						The dataset contains 5,078 images(3,561/762/75 for training/validation/testing) and 34,222 QA pairs.  
+                        </p>
+					<center>
+                    <img src="/img/dataset/mdcd.png" width="1000">
+                </center>
+                    </div>
+					
+                   
+                    <h2>Annotation</h2>
+					<div style="font-size:18px">
+					<p>The annotations are organized in a JSON format, an example is: </p>
+					
+						  
+						<p>
+						<img width="600px" href="/img/dataset/mdcd-sample.jpg"/> 
+						
+						  <pre>
+datalist.json:
+{
+	"drug/Images/112.jpg": {
+	    
+		"category": "药品说明书", 
+		"height": 1000, 
+		"width": 1000, 
+		"questionId": [17, 18, 19, 20],
+		"content_ann": {
+			"bboxes": [[197, 39, 282, 39, 282, 68, 197, 68], [280, 34, 296, 34, 296, 49, 280, 49], [201, 77, 477, 79, 477, 96, 200, 95], [270, 133, 716, 136, 715, 183, 270, 180], [299, 213, 684, 215, 684, 232, 298, 230], [207, 258, 305, 258, 305, 275, 207, 275], [218, 285, 367, 286, 367, 304, 218, 302], [220, 312, 418, 314, 418, 331, 220, 329], [207, 338, 701, 342, 701, 358, 207, 354], [207, 365, 737, 369, 737, 385, 207, 382], [207, 393, 745, 396, 745, 411, 207, 408], [314, 421, 509, 421, 509, 436, 314, 436], [206, 447, 501, 448, 501, 464, 206, 462], [207, 473, 528, 475, 528, 491, 207, 489], [206, 499, 395, 501, 395, 517, 206, 516], [206, 526, 394, 528, 394, 545, 206, 544], [206, 554, 394, 555, 394, 571, 206, 570], [205, 580, 357, 580, 357, 597, 205, 597], [205, 607, 636, 608, 636, 626, 204, 625], [206, 633, 368, 634, 368, 652, 206, 650], [206, 661, 541, 663, 541, 679, 206, 677], [206, 689, 473, 689, 473, 704, 206, 704], [205, 712, 304, 714, 304, 733, 204, 731], [218, 742, 499, 744, 499, 759, 218, 757], [218, 768, 778, 771, 778, 786, 218, 784], [218, 796, 369, 796, 369, 811, 218, 811], [219, 822, 433, 823, 432, 839, 219, 838], [217, 850, 432, 850, 432, 866, 217, 866], [218, 876, 777, 879, 777, 895, 218, 892], [214, 901, 417, 902, 417, 923, 214, 921], [366, 943, 613, 944, 613, 961, 365, 959]], 
+			"texts": ["普林松°", "R", "核准日期:2011年02月09日", "护肝片说明书", "请仔细阅读说明书并在医师指导下使用", "[药品名称]", "通用名称:护肝片", "汉语拼音:Hugan Pian", "[成份]柴胡、茵陈、板蓝根、五味子、猪胆粉、绿豆。", "[性状]本品为糖衣片,除去包衣后显棕色至褐色;味苦。", "[功能主治]疏肝理气,健脾消食。具有降低转氨酶作用。用于", "慢性肝炎及早期肝硬化。", "[规格]糖衣片(片芯重0.35g)", "[用法用量]口服。一次4片,一日3次。", "[不良反应]尚不明确。", "[禁忌]尚不明确。", "[注意事项]尚不明确。", "[贮藏]密封。", "[包装]药用聚乙烯塑料瓶,108片/瓶X1瓶/盒。", "[有效期]24个月", "执行标准《中国药典》1年版一部", "[批准文号]国药准字Z22025418", "[生产企业]", "企业名称:吉林真元制药有限公司", "生产地址吉林省榆树市刘家镇(长春五棵树现代农业产业开发区)", "邮政编码130404", "电话号码:0431-88663899", "传真号码:0431-84545111", "注册地址吉林省榆树市刘家镇(长春五棵树现代农业产业开发区)", "网址:www.zyzy.cc", "如果有问题可与生产企业联系"]
+		}, 
+		"answer_ann": {
+			"questions": [["护肝片的成分是什么？"], ["一天应该吃几片护肝片？"], ["生产厂家的地址在哪？"], ["这份文档/图片是属于药品说明书吗？"]], 
+			"answers": [["柴胡、茵陈、板蓝根、五味子、猪胆粉、绿豆"], ["12片"], ["吉林省榆树市刘家镇(长春五棵树现代农业产业开发区)"], ["是"]], 
+			"extractive_labels": [1, 0, 1, 0]
+			"indexs": [[[[8, 4, 23]]], [[[-1, -1, -1]]], [[[24, 4, 28]]], [[[-1, -1, -1]]]], 
+			
+		}
+	},
+	...
+}
+</pre>
+		where images paths are the keys of the JSON file, and each image contains:
+	<br>
+  <strong>|- category</strong> (str): document category,
+	<br>
+  <strong>|- height</strong> (int): image height, 
+    <br>
+ <strong>|- width</strong> (int): image width,
+    <br>
+  <strong>|- questionId</strong> List[int]: questions IDs belonging to the image,
+<br>
+ <strong>|-  content_ann</strong> dict: OCR annotations, elements correspond to each other according to the list position.
+<br>
+ <strong>|-|-  bboxes</strong> List[List[int]]: text locations, in 4-point forms.
+<br>
+ <strong>|-|-  texts</strong> List[str]: text contents.
+<br>
+ <strong>|- answer_ann</strong> dict: DocVQA annotations, elements correspond to each other according to the list position.
+<br>
+ <strong>|-|- questions</strong> List[List[str]]: questions of the image, 
+<br>
+ <strong>|-|- answers</strong> List[List[str]]: answers of the image
+<br>
+ <strong>|-|- extractive_labels</strong> List[int]: whether the question is extractive (1 for extractive and 0 for abstractive), 
+<br>
+ <strong>|-|- indexs</strong> List[List[List[int]]:  for extractive questions, the positions of answers in the text, which organized as [index of the text, start pos, end pos], abstractive questions are all -1. 
+<br>
+
+		
+						
+					
+					<h2>Terms of Use</h2>
+					
+					<div style="font-size:18px">
+					<li> The public annotations belong to Hikvision Resarch Institute and Zhejiang University and are licensed under the <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. </li>
+					</div>    
+					
+					<h2>Citation</h2>
+		
+				
+
+					<h2>Dataset Download</h2>
+					
+					<div style="font-size:18px">
+					The dataset's can be downloaded from <a href="">[link]</a>, acess code ().
+					</div>
+
+					<h2>Source code</h2>
+					<div style="font-size:18px">
+					The evaluation script and source code of baseline method will be published soon.
+					</div>
+            </div>
+        </div>
+		</div>
+	</div>
+
+    <div class="footer"></div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/all.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".footer").load("/common/footer.html");
+            $(".navigation").load("/common/navigation.html");
+        });
+    </script>
+
+</body>
+
+</html>
