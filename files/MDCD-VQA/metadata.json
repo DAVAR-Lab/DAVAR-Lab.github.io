@@ -1,0 +1,292 @@
+{
+  "@context": {
+    "@language": "zh",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "name": "MDCD-VQA",
+  "description": "The MDCD-VQA dataset contains multi-domain chinese documents that collected from different sources, which can be roughly related to 7 domains, including Business, Financial, Medical, Education, Lifestyle, Transportation, Culture. This dataset can be used not only to perform traditional DocVQA tasks, but also to evaluate existing Large Vision Language Models (LVLMs), which can be a good test of the generalizability of modeling schemes. The dataset contains 5,071 images and 34,170 QA pairs.",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "citeAs": "",
+  "license": "The public annotations belong to Hikvision Resarch Institute and Zhejiang University and are licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.",
+  "url": "https://davar-lab.github.io/dataset/mdcd-vqa.html",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "MDCD-VQA.zip",
+	  "name": "MDCD-VQA.zip",
+      "contentUrl": "https://drive.ticklink.com/hcs/controller/hik-manage/fileDownload?link=S9V5cF0o&",
+      "encodingFormat": "application/zip",
+      "sha256": "sha256"
+    },
+	  {
+      "@type": "cr:FileSet",
+      "@id": "Images",
+      "containedIn": {
+        "@id": "MDCD-VQA.zip"
+      },
+      "encodingFormat": "image/jpeg",
+      "includes": "Images/*/Images/*"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "Datalists",
+      "containedIn": {
+        "@id": "MDCD-VQA.zip"
+      },
+      "encodingFormat": "application/json",
+      "includes": "Datalists/*.json"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "images",
+      "name": "images",
+      "key": "image_id",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "images/image_id",
+          "name": "image_id",
+          "description": "The fullpath of the image. eg: drug/Images/112.jpg",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "Images"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "*/Images/*"
+            }
+          }
+        }
+      ]
+    },
+	  {
+      "@type": "cr:RecordSet",
+      "@id": "annotations",
+      "name": "annotations",
+      "key": "image_id",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "annotations/category",
+          "name": "category",
+          "description": "The category of the image.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "Datalists"
+            },
+            "extract": {
+              "column": "category"
+            }
+          }
+        },
+		    {
+          "@type": "cr:Field",
+          "@id": "annotations/height",
+          "name": "height",
+          "description": "The height of the image.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "Datalists"
+            },
+            "extract": {
+              "column": "height"
+            }
+          }
+        },
+		    {
+          "@type": "cr:Field",
+          "@id": "annotations/width",
+          "name": "width",
+          "description": "The width of the image.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "Datalists"
+            },
+            "extract": {
+              "column": "width"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "annotations/content_ann",
+      "name": "annotations/content_ann",
+      "key": "image_id/content_ann",
+      "dataType": "sc:StructuredValue",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "annotations/content_ann/bboxes",
+          "description": "text locations, in 4-point forms.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "Datalists"
+            },
+            "extract": {
+              "column": "bboxes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "annotations/content_ann/texts",
+          "description": "text contents.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "Datalists"
+            },
+            "extract": {
+              "column": "texts"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "annotations/answer_ann",
+      "name": "annotations/answer_ann",
+      "key": "image_id/answer_ann",
+      "dataType": "sc:StructuredValue",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "annotations/answer_ann/questionId",
+          "description": "questions IDs belonging to the image.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "Datalists"
+            },
+            "extract": {
+              "column": "questionId"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "annotations/answer_ann/questions",
+          "description": "questions of the image.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "Datalists"
+            },
+            "extract": {
+              "column": "questions"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "annotations/answer_ann/answers",
+          "description": "answers of the image.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "Datalists"
+            },
+            "extract": {
+              "column": "answers"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "annotations/answer_ann/extractive_labels",
+          "description": "whether the question is extractive (1 for extractive and 0 for abstractive).",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "Datalists"
+            },
+            "extract": {
+              "column": "extractive_labels"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "annotations/answer_ann/indexs",
+          "description": "for extractive questions, the positions of answers in the text, which organized as [index of the text, start pos, end pos], abstractive questions are all -1.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "Datalists"
+            },
+            "extract": {
+              "column": "indexs"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "annotations/answer_ann/class_labels",
+          "description": "the category of each question.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "Datalists"
+            },
+            "extract": {
+              "column": "class_labels"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
